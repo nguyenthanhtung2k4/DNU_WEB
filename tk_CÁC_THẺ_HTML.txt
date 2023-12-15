@@ -1,0 +1,36 @@
+tất  cả các thẻ  
+<!------- > đây là ghi chú
+
+
+<title> dùng  để tên trên thanh tab
+<body>  Là phân thân
+<div>nhóm  nhiều phần tử html
+<h1> dùng để tên tiêu đề thứ nhất 1
+<h2> dùng để tên tiêu đề thứ nhất 2
+<h3> dùng để tên tiêu đề thứ nhất 3
+<h4> dùng để tên tiêu đề thứ nhất 4
+<h5> dùng để tên tiêu đề thứ nhất 5
+<h6> dùng để tên tiêu đề thứ nhất 6
+<p> dùng để ghi  1 đoạn văn bản 
+<span> dùng để chèn màu hay ảnh vào 1 văn bản nó thường nằm trong <p></p>
+<br> chèn ký tự kết thúc dòng  (tu dong xuong dong)
+<hr> kẻ 1 đường nằm ngang trong web
+<a> tạo liên kết (link)
+<img> thêm ảnh vaò web
+
+CÁCH THÊM MÀU CHO  1 TRANG WEB
+<body bgcolor="tên_màu">
+
+CÁCH THÊM ẢNH VÀO background  TRANG WEB
+<body backgroung="tên_ảnh">
+
+CÁCH DÙNG STYLE:  vs tên màu vs font chữ ;
+<style "color:tên_màu ; font-size:30p;....">
+     background : phong man hinh chu web
+     font-family phong chu 
+     font-size :  kich co (%)
+     text-align : can chinh chu(trai left;  giua: center ; phai: right)
+
+THAY ĐỔI MÀU CHỮ  
+<style "color:tên_màu">
+bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn bản nó thường nằm trong <p></p>
