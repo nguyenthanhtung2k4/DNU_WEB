@@ -1,7 +1,7 @@
 tất  cả các thẻ  
 <!------- > đây là ghi chú
 
-
+##############################################################################
 <title> dùng  để tên trên thanh tab
 <body>  Là phân thân
 <div>nhóm  nhiều phần tử html
@@ -17,20 +17,235 @@ tất  cả các thẻ
 <hr> kẻ 1 đường nằm ngang trong web
 <a> tạo liên kết (link)
 <img> thêm ảnh vaò web
+##############################################################################
+<ul><li> <!-- hai cái đi  liền vớinhau-->  in  ra  cac kiểu DẤU CHẤM trước các chữ  
+##############################################################################
+<ol stype="1"> dùng để  in ra các số đằng trước các chữ 
+vd: 1 tung
+    2 nam......
+##############################################################################
+<dl> bắt đầu định nghĩa các kiểu văn bản trong gồm:
+	<dl>  
+		<dt>HTML</dt>
+		<dd>kiểu văn bản </dd>
+	</dl>
+vd : chữ  "kiểu văn bản "  nó sẽ nùi vào 1 dòng
+	HTML
+		kiểu văn bản
+ 
+###########################################################################
+<table> in kiểu danh sách  theo 1 kiểu bảng work và trong table gồm có: 
+<!-- nó thường đi  với thẻ border -->
+<!-- tham khảo thêm  với <style> và trong đó có border-->
+<!-- 	table, th, td {
+  	border: 1px solid black;
+  	border-collapse: collapse;
+	}
+-->
 
+	<!-- phần này phần đầu-->
+	<thead>
+		<th> stt</th> 
+		<th> tên</th>
+	</thead>
+	<!-- phần này là phần thân-->
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td> nguyen thanh tung</td>
+		</tr>
+	</tbody>
+##############################################################################
+<input> dung để chọn đáp án 
+<button>  hiện ra 1 nút để nhấn vào
+
+##############################################################################
+<header> dùn cho các nằm bên trên
+<footer> dùng để các thẻ nằm bên dưới 
+<aside> các  thẻ  nằm bên  trái 
+<div> chia ra các phần tử gộp các thẻ vào với nhau và nó được sd trong cả css section
+<section> cũng là chia các phần tử lại với nhau nhưng trong section thì nó sẽ chia ra 1 các cụ thể hơn so với <div>  ở phía dòng trên
+<nav> dùng để các menu
+
+<style>  nó dùng để khai báo các phần thẻ như màu sắc , kiểu , kích thước trên 1 trang web>>  khi khai báo nó sẽ giúp các web đó theo 1 nguyên tắc
+##############################################################################
 CÁCH THÊM MÀU CHO  1 TRANG WEB
 <body bgcolor="tên_màu">
+##############################################################################
 
-CÁCH THÊM ẢNH VÀO background  TRANG WEB
+CÁCH THÊM ẢNH VÀO background , video ,audio, 1 kenh youtube TRANG WEB
 <body backgroung="tên_ảnh">
-
+<body style= "background-image: url('tên_ảnh');" >
+<img> thêm ảnh vào web 
+<iframe> cách chèn video yotube vào trong web
+##############################################################################
+<video> thêm video có trong soure >> cách dùng :
+		<video width="320" height="240" controls>
+ 		<source src="movie.mp4" type="video/mp4">
+  		<source src="movie.ogg" type="video/ogg">
+		Your browser does not support the video tag.
+		</video>
+##############################################################################
+<audio> thêm âm thanh vào web cách dùng tương tự như <video>
+##############################################################################
 CÁCH DÙNG STYLE:  vs tên màu vs font chữ ;
-<style "color:tên_màu ; font-size:30p;....">
+<style "color:tên_màu ; font-size:30p;    width,length">
      background : phong man hinh chu web
      font-family phong chu 
      font-size :  kich co (%)
      text-align : can chinh chu(trai left;  giua: center ; phai: right)
+##############################################################################
 
 THAY ĐỔI MÀU CHỮ  
 <style "color:tên_màu">
 bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn bản nó thường nằm trong <p></p>
+##############################################################################
+
+ĐỊNH DẠNG VĂN BẢN :
+     <b> dùng để in đậm  chữ
+     <mark> dùng để  nền chữ màu vàng
+     <strong> dùng để in đậm chữ 
+     <i> làm cho văn bản chữ in nghiêng 
+     <em> cũng là in nghiêng mà nó còn thay đổi  kiểu chữ khác 
+     <small> làm cho chữ nhỏ hơn
+     <del>  làm cho chữ gạch ngang ở giữa chữ
+     <ins> dùng để gạch chân chữ 
+     <sub> làm chữ lệch  khỏi dòng xuôngd  bên dưới 
+     <sup> làm chữ lệch  khỏi dòng xuôngd  bên trên
+##############################################################################
+ CÁCTHÀNH PHẦN CHỨA HTML CHỨA THẺ FROM 
+	Thuộc tính form chứa id của form mà thẻ input thuộc về (trường hợp thẻ input không nằm trong thẻ form)
+	Thuộc tính formaction giá trị đè lên thuộc tính action của form và hoạt động 
+		với loại input submit và image
+	Thuộc tính formenctype giá trị đè lên thuộc tính enctype của form và hoạt 
+		động với loại input submit và image
+	Thuộc tính formmethod giá trị đè lên thuộc tính method của form và hoạt 
+		động với loại input submit và image
+##############################################################################
+	<input type>
+	CÁC THẺ CHỨA THÀNH PHẦN INTPUT TYPE
+					<input type=“button”> LÀ NÚT BẤM>> KHI TA BẤM VÀO SẼ HIỆN RA THÔNG BÁO
+					<input type=“checkbox”> HIỆN RA NÚT  Ô VUÔNG ĐỂ TÍCH
+					<input type=“radio”>    HIỆN RA NÚT HÌNH TRÒN ĐỂ TÍCH
+					<input type=“color”> HIỆN RA MÀU NỀN CỦA NÚT BẤM 
+					
+					<input type=“text”> HIỆN RA Ô CHỮ NHẬT ĐỂ NHẬP TEXT
+					<input type=“email”>  LÀ KHI TA DÙNG CHO  VIỆC ĐIỀN EMAIL  VÀO
+					<input type=“password”>  LÀ KHI TA MUỐN NGƯỜI DÙNG ĐIỀN MẬT  KHẨU  VÀO
+					<input type=“file”>  LÀ KHI TA GỬI FILE NÊN WEB
+					<input type=“hidden”> LAG KHI TA KHÔNG MUỐN NGƯỜI DÙNG NHÌN THẤY(NÓ SẼ ẨN)
+					<input type=“image”>  LAF ẢNH
+					
+					#############################################################################
+					XÁC ĐỊNH MIN MAX NHƯ CÁC HÀM BÊN DƯỚI :
+					<input type=“date”> LỰA CHỌN NGÀY THÁNG NĂM SINH  
+					<input type=“datetime-local”> NGÀY THÁNG NĂM SINH>>  GIỜ PHÚT GIÂY 
+					<input type=“range”> LỰA CHỌN THÔNG SÔ  MIN  HAY  MAX (THANH KÉO CHỈNH  NHƯ ÂM LƯỢNG)
+					<input type=“month”> LỰA CHỌN LỊCH THÁNG
+					<input type=“week”> LỰA CHỌN LỊCH CỦA TUẦN
+					<input type=“time”>  LỰA CHỌN GIỜ PHÚT GIÂY
+					<input type=“number”>  CÁC SỐ LỰA CHỌN( LƯỚT LÊN LƯỚT XUỐNG)
+					##############################################################################
+					<input type=“reset”> DÙNG ĐỂ RẾT LẠI  TOÀN BỘ  NHỮNG GÌ MÀ MÌNH ĐÃ GHI
+					<input type=“search”> DÙNG ĐỂ TÌM KIẾM CÁC TỪ MÀ WEB HỖ TRỢ
+					<input type=“submit”> DÙNG ĐỂ GỬI NỘI DUNG CỦA NGƯỜI DÙNG
+					<input type=“tel”> NHẬP SỐ ĐIỆN THOẠI
+					<input type=“url”>  DÙNG ĐỂ GHI ĐƯỜNG LINK  VÀO TRONG WEB
+					
+
+	<label for> được sử dụng để định nghĩa nhãn cho các phần tử trong HTML, chủ yếu là các điều khiển trong các form HTML
+	##############################################################################
+	<select>  nó giống như bạn lựa chọn quốc gia của bạn
+	Khi ta dùng <select> thì nó sẽ đi  cùng với <option>
+	vd:
+			<form>
+				<select name="country" id="value">
+					<option value="vietnam">all</option>
+					<option value="vietnam">vietnam</option>
+					<option value="japan">japan</option>
+					<option value="korea">korea</option>
+				</select>
+			</form>
+		==> select khác với datalist(nd: bên dưới)  là nó k hỗ trợ các tùy chọn  khác
+	##############################################################################
+	<textarea> cho phép được ghi văn bản vô  hạn
+	( đi  với rows: xác định số dòng)
+	( đi với cols: xác định số cột văn bản)
+	vd:
+				<form>
+					<textarea name="comment" id="comment" rows="5" cols="40">
+					Ý kiến của bạn
+					</textarea>
+				</form> 
+	##############################################################################
+	<button> nút nhấn 
+	vd: 
+					<button type="button" onclick="alert('Hello!')">Nhấn vào đây</button>
+	##############################################################################
+	<fieldset> dùng để nhóm các phần tử với nhau được dùng với legend
+	<legend>  dùng để tạo khung đường viền bên ngoài các phần tử 
+	vd: fieldset và legend
+					<form action="/submit-form" method="post">
+					<fieldset>
+					<legend>Thông tin cá nhân</legend>
+					<label for="name">Tên:</label>
+					<input type="text" id="name" name="name">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email">
+					</fieldset>
+					<fieldset>
+					<legend>Sở thích</legend>
+					<label for="music">Thích nghe nhạc:</label>
+					<input type="checkbox" id="music" name="music">
+					<label for="sport">Thích chơi thể thao:</label>
+					<input type="checkbox" id="sport" name="sport">
+					</fieldset>
+					<input type="submit" value="Gửi">
+					</form>
+	##############################################################################
+	<datalist> tạo ra danh sách và được dùng như select (nd: bên trên)  mà nó được chọn ngoài option()
+	<output> là kết quả ra 
+	vd: 
+					<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+					<input type="number" id="a" value="10">
+					+
+					<input type="number" id="b" value="20">
+					=
+					<output name="x" for="a b"></output>
+					</form>
+	##############################################################################
+	<option> nghĩa là lựa chọn  (được dùng trong <select> và <datalist>)
+	<optgroup>  được sử dụng để nhóm các tùy chọn có liên quan trong một danh sách thả xuống được tạo bởi thẻ <select>
+	vd: 
+				<label for="fruits">Chọn trái cây:</label>
+				<select id="fruits" name="fruits">
+				<optgroup label="Trái cây nhiệt đới">
+				<option value="banana">Chuối</option>
+				<option value="mango">Xoài</option>
+				<option value="pineapple">Dứa</option>
+				</optgroup>
+				<optgroup label="Trái cây ôn đới">
+				<option value="apple">Táo</option>
+				<option value="pear">Lê</option>
+				<option value="grape">Nho</option>
+				</optgroup>
+				</select>
+	##############################################################################
+	CÁC THUỘC TÍNH CỦA THẺ <INPUT TYPE>:
+			Thuộc tính value: giá trị khởi tạo cho thẻ nhập input
+			Thuộc tính readonly: chỉ ra thẻ nhập input này là chỉ đọc không sửa được vẫn đc copy
+			Thuộc tính disabled: chỉ ra thẻ nhập input nên bị vô hiệu hoá
+			Thuộc tính size: định nghĩa độ rộng của hộp nhập đơn vị là số ký tự
+			Thuộc tính maxlength: xác định số ký tự tối đa cho phép trong hộp nhập
+			Thuộc tính min và max: xác định giá trị nhỏ nhất và lớn nhất của hộp nhập. 
+			Thuộc tính multiple: xác định người dùng có thể nhập một hoặc nhiều hơn một giá trị nhập vào
+			Thuộc tính pattern: xác định mẫu biểu thức chính quy mà dữ liệu nhập vào sẽ được kiểm tra khi mà form dữ liệu được gửi lên
+			Thuộc tính placeholder: hiện thị  nội dung muốn cho người dùng biết trong thanh tìm kiếm
+			Thuộc tính required: xác định dữ liệu bắt buộc phải nhập trước khi gửi dữ liệu được dùng trong select,input,textarea
+			Thuộc tính step: xác định bước nhảy hợp lệ cho hộp nhập 
+						ví dụ step=“2” các số hợp lệ sẽ là -2,0,2,4,… Các dạng dữ liệu hỗ trợ number, range, date,datetime-local, month, time, week. 
+			Thuộc tính autofocus: nó sẽ tự động tạo đặt mặc định con trỏ chuột lên thanh tìm kiếm
+			Thuộc tính height và width xác định độ rộng và cao của hộp nhập ảnh <input type=“image”/>
+			Thuộc tính list ---> datalist chứa các lựa chọn được định nghĩa trước cho thẻ <input>
+			Thuộc tính autocomplete: chỉ ra hộp nhập có chức năng tự động gợi ý nhập là 
+						được bật “on” hoặc tắt “off”. Thuộc tính hoạt động với các loại <input>: text, search, url, tel, email, password, datepickers, range, color

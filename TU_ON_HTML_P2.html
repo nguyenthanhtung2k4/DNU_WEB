@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <button>Đăng ký</button>
+  </div>
+  <div>
+    <form action="/search" method="get">
+      <label for="search">Tìm kiếm:</label>
+      <input type="text" id="search" name="q" autofocus>
+      <input type="submit" value="Tìm kiếm">
+    </form>    
+    <form action="/submit-form" method="post">
+      <label for="name">Tên của bạn:</label>
+      <input type="text" id="name" name="name" required>
+      <input type="submit" value="Gửi">
+      <br><br>
+      <label for="timkiem">tim kiem</label>
+      <input  type="search" name="timkiem" placeholder="ban tim kiem  di "></select><br><br>
+    </form>
+  </div>
+  <div>
+    <label for="username">Tên đăng nhập:</label>
+<input type="text" id="username" name="username" size="60">
+  </div>
+  <div>x
+    <form id="myForm" action="/submit-form" method="post">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" form="myForm">
+      <input type="submit" value="Gửi" formaction="/submit-form-2" formenctype="multipart/form-data" formmethod="get">
+      <br><br><input type="text"><br><br><br>
+      <input type="button" onclick="alert('thanhtung')" value="nhanvao day">
+      <br><br>
+    </form>
+    <!--  DANG XEM SAI O  DAU  VA DE NO XUAT  HIEN NUT NHIN MAT KHAU -->
+    <div>
+      <form action="submit_form.php">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" autocomplete="on">
+          <br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" autocomplete="off">
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" autocomplete="on">
+          <br>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" autocomplete="off">
+          <br>
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
