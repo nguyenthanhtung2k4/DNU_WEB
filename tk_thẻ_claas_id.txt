@@ -1,0 +1,4 @@
+link tham khảo :  https://www.youtube.com/watch?v=AgZ0PX28bnA&list=PL_-VfJajZj0U9nEXa4qyfB4U5ZIYCMPlz&index=11
+ 
+ID : là dùng để các thẻ tên riêng và nó như cccd.  ngoài ra nó có thể quan trọng trong js và css
+CLAAS :  là dùng để gọi  chung 1 đối tượng  thì ta sẽ dùng tk claas

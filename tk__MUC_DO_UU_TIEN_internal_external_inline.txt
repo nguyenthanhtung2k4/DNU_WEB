@@ -1,0 +1,15 @@
+link tham khảo  thêm: 
+link: https://www.youtube.com/watch?v=AgZ0PX28bnA&list=PL_-VfJajZj0U9nEXa4qyfB4U5ZIYCMPlz&index=11
+
+internal : Là  các thẻ bên  ngoài vào 
+      vd:   như là các file css  , link  bên ngoài khỏi là internal
+external :  là  viết <style> để  ở bên trên <body>
+inline : là dùng viết trức tiếp trong thẻ đó luôn khỏi là  là inline 
+     vd :  như là viết bên trong <h1 color: > ,<div color:>.......
+
+CÁC MỨC ĐỘ ƯU TIÊN
+- internal == external
+- inline ==1000(điểm)
+- #id ==100(điểm)
+- .claas ==10(điểm)
+- tag == 1 (điểm)
