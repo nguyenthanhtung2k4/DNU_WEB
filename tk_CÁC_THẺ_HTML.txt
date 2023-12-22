@@ -94,6 +94,12 @@ CÁCH DÙNG STYLE:  vs tên màu vs font chữ ;
      font-family phong chu 
      font-size :  kich co (%)
      text-align : can chinh chu(trai left;  giua: center ; phai: right)
+	font-weight: dùng để ghi  chữ in đâm (font-weight: bold :IN ĐẬM CHỮ ; font-weight: 900 :DÙNG ĐỂ LÀM TO CHỮ  )
+	text-transform : thuộc tính làm để in đâm , in thường các chữ
+				(text-transform: uppercase; IN ĐẬM TOÀN BỘ;)
+				(text-transform: lowercase ;IN TOÀN BỘ THƯỜNG) 
+				(text-transform: capitalize;IN CHỮ CÁI ĐẦU TIÊN)
+	tetx-shadow : hiệu ứng bóng độ(tetx-shadow: CHIỀU CAO px, BÊN PHẢI px, BÊN DƯỚI px, TÊN  MÀU )
 ##############################################################################
 
 THAY ĐỔI MÀU CHỮ  
@@ -240,7 +246,7 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 			Thuộc tính min và max: xác định giá trị nhỏ nhất và lớn nhất của hộp nhập. 
 			Thuộc tính multiple: xác định người dùng có thể nhập một hoặc nhiều hơn một giá trị nhập vào
 			Thuộc tính pattern: xác định mẫu biểu thức chính quy mà dữ liệu nhập vào sẽ được kiểm tra khi mà form dữ liệu được gửi lên
-			Thuộc tính placeholder: hiện thị  nội dung muốn cho người dùng biết trong thanh tìm kiếm
+			Thuộc tính placeholder: fi thị  nội dung muốn cho người dùng biết trong thanh tìm kiếm
 			Thuộc tính required: xác định dữ liệu bắt buộc phải nhập trước khi gửi dữ liệu được dùng trong select,input,textarea
 			Thuộc tính step: xác định bước nhảy hợp lệ cho hộp nhập 
 						ví dụ step=“2” các số hợp lệ sẽ là -2,0,2,4,… Các dạng dữ liệu hỗ trợ number, range, date,datetime-local, month, time, week. 

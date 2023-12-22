@@ -3,17 +3,19 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Bai1-Login</title>
+     <title>Login</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div style="text-align: center;">
-          <h1 style="text-align: center;">Login</h1>
-          <!--email -mk- dang nhap - quen mat khau- tao tai khoan -->
-          <form action="login.php">
-               <input type="email" pattern=" [a-z0-9._%+-]+@ [a-z0-9.-]+\. [a-z] {2,}$" title="Địa chỉ email phải có dạng ký tự@ký tự.tên miền" placeholder="Email hoac so dien thoai" required >
-               <br><input type="text" placeholder="Mat khau" autocomplete="on">
-          </form>
+     <div class="class_div">
+          <h1 class="font_text" style="font-size: 50px;">Login</h1><br>
+          <input type="text" class="font_text" placeholder="Email or Number"><br>  
+          <input type="password" class="font_text" placeholder="Password"><br>
+          <label for="user/Login">
+               <a href="">quen mat khau</a>
+          </label>
+          <button type="submit" class="font_text">Login</button>
+          
      </div>
 </body>
-</html> 
-
+</html>
