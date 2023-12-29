@@ -138,6 +138,8 @@ CÁCH DÙNG STYLE:  vs tên màu vs font chữ ;
 				(text-transform: lowercase ;IN TOÀN BỘ THƯỜNG) 
 				(text-transform: capitalize;IN CHỮ CÁI ĐẦU TIÊN)
 	tetx-shadow : hiệu ứng bóng độ(tetx-shadow: CHIỀU CAO px, BÊN PHẢI px, BÊN DƯỚI px, TÊN  MÀU )
+	link-tham_khao(shadow): https://www.w3schools.com/cssref/playdemo.php?filename=playcss_text-shadow
+	
 	text-direction: none; :dùng để bỏ gạch chân dưới đường link
 	text-visited:{màu bạn muốn}  khi nhấn vào  và thoát ra nó sẽ hiện link đó màu khác 
 ##############################################################################

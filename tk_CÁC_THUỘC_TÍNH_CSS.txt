@@ -1,0 +1,77 @@
+###################################CÁC THUỘC TÍNH CSS
+ID= .{tên id}
+CLAAS= #{tên_claas}
+
+# THUỘC TÍNH COLER
+     color: red /// kiểu này là color
+     color: rgb(0,0,0) // này là chọnh màu theo  rgb(viết tắt là red grend blue )
+     color: rgba(0,0,0,0.5) //  như này nó sẽ giảm đi  độ sáng của màu
+     color: #ffa400 // như này là kiểu màu hex 
+     link tham khảo thêm: https://www.w3schools.com/css/css_colors.asp
+
+# THUỐC TÍNH BACKGROUND :
+- Khi ta dùng css để cho  back  ground ta nên  thêm width  vs height ( Để xét độ rộng và chiều cao của nó)
+     background-color: {tên_màu_}
+-Thêm ảnh vào background:
+     background-image: url("{link_ảnh}")  ===> Hiên thị hình nền 
+     background-position: center center  ==> nó sẽ làm ảnh  để ở giữa
+                          top            ==> Nó sẽ làm ảnh lùi lên trên
+                          bottom         ==> Nó sẽ làm ảnh lùi xuống dưới
+                          left           ==> Nó sẽ làm ảnh lùi ra bên trái
+                          right          ==> Nó sẽ làm ảnh lùi ra bên phải
+                          50% 50%        ==> Nó sẽ làm anh ở chính giữa
+                          ta cũng có thê kết hợp :  top bottom  lại  với nhau và lệnh khác cũng có thể kết hơpej với nhau
+     backgroud-size: cover    ==> Phủ kín nền ở web (NẾU ẢNH QUÁ BÉ NÓ SẼ BỊ LẶP) 
+                     auto     ==> Nó sẽ tự động làm ảnh sao cho phủ hết trên web ( vẫn có thể sdi chuyển ảnh được trên web nếu anh đó to)
+                    Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
+     backgroud-att
+     backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó
+    background-attachment: fixed; ==> Làmảnh đứng yên không di chuyển theo  thanh cuộn xuống
+    ==> Ta cũng có thể viết tắt các thuộc tính bằng cách:
+    vd:  viết ngắn gọn: 
+    background: url('https://th.bing.com/th/id/R.1a496e77b81bace0f6dcd2f4e5026263?rik=WOuKDUqJqV1jFw&riu=http%3a%2f%2fflash24.co.kr%2fg4%2fdata%2fmw.cheditor%2f2206%2f9DqzlUaqHVX28HBlvkPlsJdxG.jpg&ehk=j5Mcc9DqEUC5mQzQFgi4MaVZJjoe6j7IyhlYuoaR2JI%3d&risl=&pid=ImgRaw&r=0') no-repeat center center / cover;
+////////////////////////////////////////////////////////////////////////////
+     width: (tính bằng px hoặc %)
+     hight: (tính bằng px hoặc %)
+- dùng với width  và hight (chiều dài và  rộng  của backgroud)
+
+# THUỘC TÍNH OVERFLOW
+     overflow: hidden (nó sẽ làm ẩn đi các khoảng text  bị thừa ra bên ngoài)
+     overflow: scroll (Nó sẽ tạo ra thanh cuộn )
+     overflow: auto (Giá autotrị tương tự như scroll, nhưng nó chỉ thêm thanh cuộn khi cần thiết)
+     ==> auto== scroll
+     ==> ngoài ra nó còn có overflow-x ; overflow-y (x: rộng ;  y là dài)
+
+vd:
+                    -----------------CSS------------------------
+                    .background {
+                    background-color: rgb(145, 95, 95);
+                    width: 100px;
+                    height: 100px;
+                    overflow: hidden;
+                    overflow: scroll;
+                    }
+                    -----------------------HTML------------
+                    <div class="background">
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo rem quo, aut, exercitationem reprehenderit cumque ratione minus laudantium obcaecati nobis vero praesentium facilis culpa et delectus tenetur, maxime quod eum? Lorem ipsum dolor, sit
+                              amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et temporibus nobis quam nisi quasi corporis, similique, qui alias modi eligendi beatae omnis praesentium repellendus a maxime doloremque voluptatem nostrum. consectetur
+                              adipisicing elit. Nobis nemo illo aperiam aliquid aliquam ex, eveniet ullam sequi exercitationem asperiores commodi? Vero voluptatum iure aut voluptatibus molestias qui culpa officiis. lo
+                         </p>
+                    </div>
+#THUỐC TÍNH MIN-MAX :
+- min  là nhỏ và max là lớn
+vd: min và max
+---------------------CSS------------------
+.background {
+    background-color: rgb(145, 95, 95);
+    max-width: 400px;
+    max-height: 200px;
+    overflow: hidden;
+    overflow: auto;
+}
+
+.background {
+    min-height: auto;
+    max-width: auto;
+}
+
