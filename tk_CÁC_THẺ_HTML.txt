@@ -3,8 +3,13 @@ tất  cả các thẻ
 
 ##############################################################################
 <title> dùng  để tên trên thanh tab
+<header> phần đầu 
 <body>  Là phân thân
-<div>nhóm  nhiều phần tử html
+<footer> là phần chân(phần cuối)
+
+<table> toàn bộ  bảng gọi  là table THAM KHẢO BÊN DƯỚI  (trong bảng có:  row:  dòng ; cols số cột)
+
+<div> LÀ nhóm  nhiều phần tử html
 <h1> dùng để tên tiêu đề thứ nhất 1
 <h2> dùng để tên tiêu đề thứ nhất 2
 <h3> dùng để tên tiêu đề thứ nhất 3
@@ -15,7 +20,17 @@ tất  cả các thẻ
 <span> dùng để chèn màu hay ảnh vào 1 văn bản nó thường nằm trong <p></p>
 <br> chèn ký tự kết thúc dòng  (tu dong xuong dong)
 <hr> kẻ 1 đường nằm ngang trong web
-<a> tạo liên kết (link)
+<a> tạo liên kết (link vd bên dưới)
+		-<style> text-direction: none; :dùng để bỏ gạch chân dưới đường link
+		- cấu trúc trong : <a> có -->taget 
+		///////////////////////////////////////////////
+		target="_bank" : MỞ RA 1 TAB MỚI
+		vd: <a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>
+		/////////////////////////////////////////////
+		target="_self" : MỞ TRỰC TIẾP TRONG 1 KHUNG HÌNH  TRONG CÙNG 1 TAB ĐÓ
+		target="_parent" : MỞ TRỰC TIẾP TRONG 1 KHUNG HÌNH  NHƯNG TO TOÀN MÀN HÌNH
+		target="_top"    : MỞ RA TRONG CÁC TAB CAO NHẬT trong <a>
+
 <img> thêm ảnh vaò web
 ##############################################################################
 <ul><li> <!-- hai cái đi  liền vớinhau-->  in  ra  cac kiểu DẤU CHẤM trước các chữ  
@@ -55,6 +70,27 @@ vd : chữ  "kiểu văn bản "  nó sẽ nùi vào 1 dòng
 			<td> nguyen thanh tung</td>
 		</tr>
 	</tbody>
+
+		###################################################################
+		THAM KHẢO THÊM CÁC THUỘC TÍNH CỦA <style> trong table:
+  				border: 1px solid black; dùng để làm viền màu đen
+				border-collapse: collapse;> dùng để làm mất đi  viền to
+				border-radius>:10px ; Dùng để làm bo tròn các viền  bên ngoài bảng( CHỈ NẰM TRONG td,th)
+				border-dotted : dùng để là chấm chấm các viền 
+				border-dashed : dùng cho chấm chấm hình ứng
+				border-solid : dùng cho viền đậm động
+				border-double : dùng cho viền đôi đậm đôi
+				border-groove : dùng cho viền đôi đậm đôi
+				border-ridge : dùng cho viền đôi nhạt đôi
+				border-outset : dùng cho viền bên đậm bên  nhạt 
+				border-none: không hiện bảng 
+				border-hidden : giá trị rỗng ,không hiện viền
+				outline : giong nhu solid 
+		################################################
+		thuộc tính  : hover() la khi  ta di chuyển con trỏ đến nơi mik muốn nó sẽ thay đổi màu mà mik đã cài đặt 
+		vd ==> th:hover{
+               background-color: aqua;
+          }	
 ##############################################################################
 <input> dung để chọn đáp án 
 <button>  hiện ra 1 nút để nhấn vào
@@ -77,10 +113,10 @@ CÁCH THÊM ẢNH VÀO background , video ,audio, 1 kenh youtube TRANG WEB
 <body backgroung="tên_ảnh">
 <body style= "background-image: url('tên_ảnh');" >
 <img> thêm ảnh vào web 
-<iframe> cách chèn video yotube vào trong web
+<iframe> cách chèn video yotube vào trong web (Nhấn vào các sao chép  các nhúng  của youtube)
 ##############################################################################
-<video> thêm video có trong soure >> cách dùng :
-		<video width="320" height="240" controls>
+<video> thêm video có trong soure >> cách dùng : (controls: hiện nút nhấn play; autoplay: tự động phát video)
+		<video width="320" height="240" controls autoplay>
  		<source src="movie.mp4" type="video/mp4">
   		<source src="movie.ogg" type="video/ogg">
 		Your browser does not support the video tag.
@@ -95,11 +131,15 @@ CÁCH DÙNG STYLE:  vs tên màu vs font chữ ;
      font-size :  kich co (%)
      text-align : can chinh chu(trai left;  giua: center ; phai: right)
 	font-weight: dùng để ghi  chữ in đâm (font-weight: bold :IN ĐẬM CHỮ ; font-weight: 900 :DÙNG ĐỂ LÀM TO CHỮ  )
+	font-style: muốn in nghiên thì dùng (font-style:italic)
+	line-height: 2 ==>  dùng để cách khoảng trống chỗ các văn bản  khi xuống dòng với nhau .
 	text-transform : thuộc tính làm để in đâm , in thường các chữ
 				(text-transform: uppercase; IN ĐẬM TOÀN BỘ;)
 				(text-transform: lowercase ;IN TOÀN BỘ THƯỜNG) 
 				(text-transform: capitalize;IN CHỮ CÁI ĐẦU TIÊN)
 	tetx-shadow : hiệu ứng bóng độ(tetx-shadow: CHIỀU CAO px, BÊN PHẢI px, BÊN DƯỚI px, TÊN  MÀU )
+	text-direction: none; :dùng để bỏ gạch chân dưới đường link
+	text-visited:{màu bạn muốn}  khi nhấn vào  và thoát ra nó sẽ hiện link đó màu khác 
 ##############################################################################
 
 THAY ĐỔI MÀU CHỮ  

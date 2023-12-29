@@ -1,0 +1,22 @@
+body{
+     background-image: url(https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg);
+}
+h1{
+     border-color: aqua;
+}
+.class_div{
+     background-color: black;
+     justify-content: center;
+     align-items: center;
+     width: 40%;
+     text-align: center;
+     color: blueviolet;
+}
+.class_div2{
+     color: blue;
+}
+.tong_login{
+     display: inline;
+     justify-content: center;
+     align-items: center;
+}
