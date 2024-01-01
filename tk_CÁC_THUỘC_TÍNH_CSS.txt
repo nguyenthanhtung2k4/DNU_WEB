@@ -1,14 +1,15 @@
 ###################################CÁC THUỘC TÍNH CSS
+* :  Là toàn bộ code của soure đó 
 ID= .{tên id}
 CLAAS= #{tên_claas}
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # THUỘC TÍNH COLER
      color: red /// kiểu này là color
      color: rgb(0,0,0) // này là chọnh màu theo  rgb(viết tắt là red grend blue )
      color: rgba(0,0,0,0.5) //  như này nó sẽ giảm đi  độ sáng của màu
      color: #ffa400 // như này là kiểu màu hex 
      link tham khảo thêm: https://www.w3schools.com/css/css_colors.asp
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # THUỐC TÍNH BACKGROUND :
 - Khi ta dùng css để cho  back  ground ta nên  thêm width  vs height ( Để xét độ rộng và chiều cao của nó)
      background-color: {tên_màu_}
@@ -24,7 +25,7 @@ CLAAS= #{tên_claas}
      backgroud-size: cover    ==> Phủ kín nền ở web (NẾU ẢNH QUÁ BÉ NÓ SẼ BỊ LẶP) 
                      auto     ==> Nó sẽ tự động làm ảnh sao cho phủ hết trên web ( vẫn có thể sdi chuyển ảnh được trên web nếu anh đó to)
                     Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
-     backgroud-att
+
      backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó
     background-attachment: fixed; ==> Làmảnh đứng yên không di chuyển theo  thanh cuộn xuống
     ==> Ta cũng có thể viết tắt các thuộc tính bằng cách:
@@ -58,20 +59,99 @@ vd:
                               adipisicing elit. Nobis nemo illo aperiam aliquid aliquam ex, eveniet ullam sequi exercitationem asperiores commodi? Vero voluptatum iure aut voluptatibus molestias qui culpa officiis. lo
                          </p>
                     </div>
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #THUỐC TÍNH MIN-MAX :
 - min  là nhỏ và max là lớn
 vd: min và max
 ---------------------CSS------------------
-.background {
-    background-color: rgb(145, 95, 95);
-    max-width: 400px;
-    max-height: 200px;
-    overflow: hidden;
-    overflow: auto;
-}
+                    .background {
+                    background-color: rgb(145, 95, 95);
+                    max-width: 400px;
+                    max-height: 200px;
+                    overflow: hidden;
+                    overflow: auto;
+                    }
 
-.background {
-    min-height: auto;
-    max-width: auto;
-}
+                    .background {
+                    min-height: auto;
+                    max-width: auto;
+                    }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#THUỘC TÍNH  EM  VÀ REM: THAM KHẢO TRONG FILE CÓ TÊN :tk_Su_Khac_nhau_EM_REM.txt
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#THUỘC TÍNH BORDER: 
+border :5px             >>>> kích thước đường viền
+border-solid            >>>> làm đường viền
+borger-color: {tên_màu} >>>>  thuộc tính sẽ làm thay đổi màu  đường viền
+border: 1px solid black; dùng để làm viền màu đen (Dòng này là viết tắt cho 3 dòng trên)
+
+				border-collapse: collapse;> dùng để làm mất đi  viền to
+				border-radius>:10px ; Dùng để làm bo tròn các viền  bên ngoài bảng( CHỈ NẰM TRONG td,th)
+				border-dotted : dùng để là chấm chấm các viền 
+				border-dashed : dùng cho chấm chấm hình ứng
+				border-solid : dùng cho viền đậm động
+				border-double : dùng cho viền đôi đậm đôi
+				border-groove : dùng cho viền đôi đậm đôi
+				border-ridge : dùng cho viền đôi nhạt đôi
+				border-outset : dùng cho viền bên đậm bên  nhạt 
+				border-none: không hiện bảng 
+				border-hidden : giá trị rỗng ,không hiện viền
+				outline== solid : giong nhu solid     
+==> NGOÀI RA TA CŨNG CÓ THỂ DÙNG CÁC KIỂU NHƯ: px,% : để thay đổi các thuộc tính của nó (THAM KHAO FILE: tk_Su_Khac_nhau_EM_REM.txt)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#THUỐC TÍNH MARGIN: Hiểu 1 cách đơn giản thì margin là để cho  ta cách TẠO KHOẢNG TRỐNG BÊN NGOÀI của 1 thẻ nào đó
+MARGIN  CÓ THỂ DÙNG DẤU ÂM (vì nó ở bên ngoài)
+vd:
+          .margin{
+               background-color: red       ;
+               width:  10rem;
+               height:  10rem;
+               //left+right=auto==>center//
+               margin-left: auto;
+               margin-right: auto ;
+               // Ta cũng có thể dùng ==> center  bằng cách sau// 
+               margin: 0 auto
+          }
+vd:
+          .margin{
+               background-color: red       ;
+               width:  10rem;
+               height:  10rem;
+               //  khối  đó  sẽ cách sang bên phải
+               margin-left: auto;
+          }
+vd: 
+          .margin{
+               background-color: red       ;
+               width:  10rem;
+               height:  10rem;
+               // Nó sẽ cách phía trên 100px//
+               margin-top: 100px;
+          }
+==> NGOÀI RA TA CŨNG CÓ THỂ DÙNG CÁC THẺ KHÁC NHƯ  CÁCH KHOẢNG CÁCH BÊN TRÊN -DƯỚI , BÊN TRÁI-PHẢI 
+nó cũng có những nhược điểm như:  nếu như bạn  xét 2 thẻ cùng 1 khoảng cách bên trên mà 2 gtri khac nhau
+thì nó sẽ lấy giá trị  nào  cao  nhất. 
+===> LINK THAM KHAO: https://www.youtube.com/watch?v=pkAmKB9CaHs&list=PLd8OdiciAE1SwMCtd6XgYp-ei1or6sb1r&index=21
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#THUỘC TÍNH PADDING: Hiểu 1 cách đơn giản là TẠO KHOẢNG TRỐNG BÊN TRONG
+PADDING : KHÔNG ĐƯỢC DÙNG DẤU ÂM(Vì nó nằm ở bên trong)
+- Nó làm giống như margin  các giá trị  cũng như  vậy
+- cũng có các giá trị như top, right, bottom,heght  <==> trên ,phải, dưới, trái
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#BOX-SIZING : dùng để làm cho kích thước border và padding cho chuẩn xác hơn
+chúng ta có thể dùng box-sizing:border-box; để tự động áp dụng sao cho  các kích thước mik đặt như mong muốn
+
+
+
+
+
+
+
+
+
+xem them va box-sizing bh thi di ngu da
 

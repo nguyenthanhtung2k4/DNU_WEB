@@ -1,0 +1,54 @@
+Link tham khảo: https://www.youtube.com/watch?v=BqaZ0Mo6LD0&list=PLd8OdiciAE1SwMCtd6XgYp-ei1or6sb1r&index=19
+####################  SỰ KHÁC NHAU CỦA EM VÀ REM  
+front-size 100% == 16px
+==> 1em ==1rem==16px
+
++ em :  là  nó sẽ phụ  thuộc vào fornt-size  chính nó hoặc  phần  tử chứa nó
+     ===> khi ta tăng  font-size lên thì 'em'  sẽ tăng lên 
+               vd: font-size =20px ==> 1em==20px 
++ rem : đơn giản hơn, không phụ thuộc vào font size trừ font-size nằm ngoài thẻ html 
+     ==> còn 'rem' sẽ không tăng lên dù font-size tăng lên  nhưng 'rem'  sẽ k tăng lên
+               vd: font-size =125% =10px ==> 1rem=16px (trong ví dụh này không tính font-size nằm ngoài thẻ html)
+
+- cách tính  px sang rem  :
+                         Ta cứ coi  100%= 16px 
+                         thì mỗi 1 rem==16px
+                         Tính 20px ==>  kết quả= 100*16 
+                                        px     = kết quả /16 
+=>>> KHUYEN DUNG THUOC TINH  :  REM DE VIET HTML 
+##########################################################################################################
+tham khảo  code bên dưới :
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          .em{
+               font-size:  25px;
+               color: #0b85ff;
+               width: 10em;
+               height: 10em;
+               background-color: #4c535a;
+               text-transform: uppercase;
+               
+          }
+          html{
+               font-size: 125%;
+          }
+          .rem{
+               font-size:  20px;
+               color: #0d0d0e;
+               width: 10rem;
+               height: 10rem;
+               background-color: #0080ff;
+               text-transform: uppercase;
+          }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <div class="em">em</div>
+     <div class="rem">rem</div>
+</body>
+</html>
