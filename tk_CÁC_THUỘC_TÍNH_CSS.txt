@@ -144,14 +144,53 @@ PADDING : KHÔNG ĐƯỢC DÙNG DẤU ÂM(Vì nó nằm ở bên trong)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #BOX-SIZING : dùng để làm cho kích thước border và padding cho chuẩn xác hơn
 chúng ta có thể dùng box-sizing:border-box; để tự động áp dụng sao cho  các kích thước mik đặt như mong muốn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# DISPLAY: Dùng để xác định hiển thị các phần tử trong HTML và mỗi giá trọ đại diện cho các phần tử khác nhau :
+     block: Đối tượng có kích thước rộng bằng với phần tử cha, chiếm toàn bộ chiều rộng của dòng, và sẽ tự động xuống dòng khi phần tử tiếp theo xuất hiện. 
+          Ví dụ: div, p, h1, h2, ul, li,…
+     inline: Đối tượng có kích thước chỉ bằng với nội dung của phần tử, không thể chỉnh sửa kích thước, vị trí và định dạng. 
+          Ví dụ: span, a, img,…
+     inline-block: Đối tượng có kích thước như một khối, nhưng lại hiển thị như một nội tuyến. 
+          Ví dụ: input, button,…
+     none: Đối tượng không hiển thị. Ví dụ: script, style,… 
+vd: 
+div {
+     display : block}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#  CÁC THUỘC TÍNH  FONRT :
+     font-family phong chu 
+     font-size :  kich co (%)
+     text-align : can chinh chu
+                    (trai left;  giua: center ; phai: right; căn đều 2 bên: justify)
+	font-weight: dùng để ghi  chữ in đâm (font-weight: bold :IN ĐẬM CHỮ ; font-weight: 900 :DÙNG ĐỂ LÀM TO CHỮ  )
+	font-style: muốn in nghiên thì dùng (font-style:italic)
+	line-height: 2 ==>  dùng để cách khoảng trống chỗ các văn bản  khi xuống dòng với nhau .
+	letter-spacing : khoảng cách các kí tự sẽ cách  xa nhau  hơn (2px..)
+     word-spacing   : Khoảng cách giữa các từ (2px 3p ... )
+     word-break: break-all : Nó sẽ làm rớt chữ xuống dòng nếu QUÁ DÀI- rớt kí tự
+     word-break: break-all : Nó sẽ làm rớt chữ xuống dòng nếu chứ QUÁ DÀI - rớt các chữ cái
 
+     white-space: nowrap ; >>>>>> Tất cả các chữ  nằm trên cùng 1 dòng
+     overflow : hidden ; >>>>>>>> Nó sẽ ẩn đi  nếu kí tự (white-space quá dài )
+     text-overflow :ellipsis ; >> Nó sẽ hiện thị dấu 3 chấm .... trên 1 hàng. Khi  dùng overflow
+     
+     text-transform : thuộc tính làm để in đâm , in thường các chữ
+				(text-transform: uppercase; IN ĐẬM TOÀN BỘ;)
+				(text-transform: lowercase ;IN TOÀN BỘ THƯỜNG) 
+				(text-transform: capitalize;IN CHỮ CÁI ĐẦU TIÊN)
+	tetx-shadow : hiệu ứng bóng độ(tetx-shadow: CHIỀU CAO px, BÊN PHẢI px, BÊN DƯỚI px, TÊN  MÀU )
+	
+	text-direction: none; :dùng để bỏ gạch chân dưới đường link
+	text-visited:{màu bạn muốn}  khi nhấn vào  và thoát ra nó sẽ hiện link đó màu khác 
+==> NGOÀI RA TA CŨNG CÓ THỂ DÙNG CÁC KIỂU PHÔNG CHỮ Ở TRANG WEB:
+LINK THAM KHẢO:  https://fonts.google.com/
+LNK THAM KHẢO : https://youtu.be/d8BrZ12XCXA?si=jqjhUy6GyHQvS6_t
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# SỬ LÝ HÌNH ẢNH:
+     object-fix: cover ; >>>> Phủ kín ảnh với kích thước đã cho 
+     object-position: >>>  muôn hoeenj thị hình ảnh nui  lên phía trên hay  lui  xuống dưới:
+                         trên :  top; phải : right ; dưới: bottom ; trái: lenght 
 
-
-
-
-
-
-
-xem them va box-sizing bh thi di ngu da
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pseudo : tính năng về nhấp chuột và đổi màu
