@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          
+          div.login{
+               width: 350px;  
+               height: 250px;  
+               background-position: center;
+               background-color: rgb(42, 110, 169);
+               text-align: center;
+               border-radius: 6%;
+               border: 2.5px solid black;
+               color: bisque;
+          }
+          .font{
+               color: rgb(7, 11, 11);
+               width: auto;
+               height: auto;
+          }
+          #dangnhap{
+               color:  rgb(213, 223, 8);
+               background-color: red;
+               text-transform: uppercase;
+               border-radius: 10%;
+               text-decoration: none;
+          }
+          body{
+               color: white ;
+               background-image: url('https://cdn.tgdd.vn/Files/2019/10/25/1212322/li-do-nen--2.jpg');
+               background-position: 50%;
+               background-size: cover;
+               background-attachment: fixed;
+          }
+     </style>
+</head>
+<body>
+
+     <div class="login">
+          <form action="">
+               <label style="font-size: 50px;color: white ;" for="Login">Login</label>
+               <br><br>
+               <!-- <label for="">Email</label> -->
+               <input class="font" type="text" placeholder="Email  or Phone" maxlength="10"    ><br>
+               <!-- <label for="">Password</label> -->
+               <input type="password" placeholder="Password" id="Password" required><br>
+               <label for="" style="text-align: left;">Remember</label>
+               <input type="checkbox" id="checkbox"><br><br>     
+               <!-- <label for="dang_nhap">Dang Nhap</label> -->
+               
+               <button id="dangnhap" type="button" onclick="alert('Hello')"><a style="text-decoration: none; color: yellow ; border-radius: 5%;" href="tung2.png">Dang nhap</a></button>
+               
+          </form>
+     </div><br><br><br>
+     <div>
+          <!-- type: radio -->
+          <h3>Gioi tinh</h3>
+          <p>Vui Long Chon Ben Duoi: </p>
+          <form action="">
+               <input type="radio" name="tung1">
+               <label for="">Nam</label>
+               <input type="radio"name="tung1">
+               <label for="">Nu</label>
+               <input type="radio" name="tung1">
+               <label for="">Khac</label>
+          </form>
+     </div>
+     <div class="sothich">
+          <h3>So thich:</h3>
+          <form action="sothich">
+               <input type="checkbox" id="sport">The thao <br>
+               <input type="checkbox" id="travl">Du Lich <br>
+               <input type="checkbox" id="sport">Xem Phim <br>
+          </form>
+     </div>
+     <div>
+          <!-- que quan -->
+          <label for="">Qua quan</label>
+          <input list="que">
+          <datalist id="que">
+               <option value="Ha Noi">Ha noi</option>
+               <option value="Ha Nam">Ha Nam</option>
+               <option value="Nam Dinh">Nam Dinh</option>
+          </datalist>
+     </div>
+     <div>
+          <!-- mau yeu thich -->
+          <label for="color"><h3 style="text-transform: uppercase;">mau yeu Thich</h3></label>
+          <input type="color" value="#ffccbb">
+     </div>
+     <div><br>
+          <!-- Chon file gui  len -->
+          <label style="text-transform:capitalize;" for="">Gui giay to  qua day </label>
+          <input type="file"><br><br>
+     </div>
+     <div style="text-align: center;" >
+          <!--   mo ta  ban than -->
+          <label for="mota" style="text-transform: capitalize; color: rgb(7, 197, 191); font-size: 20px ;">mo ta ngan gon ve ban than</label> <br>
+          <textarea style="border: 4px solid black;" name="mota" id="" cols="50" rows="10" placeholder="Nhap noi dung mo ta ban than cua minh vao day" ></textarea>
+     </div>
+</body>
+</html>

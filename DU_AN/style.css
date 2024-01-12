@@ -23,8 +23,9 @@ h1 {
     display: inline;
     justify-content: center;
     align-items: center;
-    background-position: 150%;
-    border: 200px;
+    background-position: center;
+    border-radius: 200%;
     height: 500px;
     border: 1px solid;
+    text-align:  center ;
 }

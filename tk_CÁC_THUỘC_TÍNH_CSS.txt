@@ -3,6 +3,14 @@
 ID= .{tên id}
 CLAAS= #{tên_claas}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# thuộc tính : rounded : 
+>>>> thuộc tính này làm để copy class khác sang class mới của mình:
+               vd:
+               {tên_class_cũ}  {tên_claas_mới} --rounded{ {các_thuộc_tính_của_nó} }
+>>> Như zậy  claass ms nó sẽ lấy lại  các thuộc tính cũ +  thuộc tính ms vào class mới
+>>> link-tham-khảo: https://youtu.be/cS24rcEbnGM?si=53faeJ1NDv5-Iv1f
+                    (đoạn  3:56)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # THUỘC TÍNH COLER
      color: red /// kiểu này là color
      color: rgb(0,0,0) // này là chọnh màu theo  rgb(viết tắt là red grend blue )
@@ -11,30 +19,38 @@ CLAAS= #{tên_claas}
      link tham khảo thêm: https://www.w3schools.com/css/css_colors.asp
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # THUỐC TÍNH BACKGROUND :
-- Khi ta dùng css để cho  back  ground ta nên  thêm width  vs height ( Để xét độ rộng và chiều cao của nó)
-     background-color: {tên_màu_}
--Thêm ảnh vào background:
-     background-image: url("{link_ảnh}")  ===> Hiên thị hình nền 
-     background-position: center center  ==> nó sẽ làm ảnh  để ở giữa
-                          top            ==> Nó sẽ làm ảnh lùi lên trên
-                          bottom         ==> Nó sẽ làm ảnh lùi xuống dưới
-                          left           ==> Nó sẽ làm ảnh lùi ra bên trái
-                          right          ==> Nó sẽ làm ảnh lùi ra bên phải
-                          50% 50%        ==> Nó sẽ làm anh ở chính giữa
-                          ta cũng có thê kết hợp :  top bottom  lại  với nhau và lệnh khác cũng có thể kết hơpej với nhau
-     backgroud-size: cover    ==> Phủ kín nền ở web (NẾU ẢNH QUÁ BÉ NÓ SẼ BỊ LẶP) 
-                     auto     ==> Nó sẽ tự động làm ảnh sao cho phủ hết trên web ( vẫn có thể sdi chuyển ảnh được trên web nếu anh đó to)
-                    Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
+                         - Khi ta dùng css để cho  back  ground ta nên  thêm width  vs height ( Để xét độ rộng và chiều cao của nó)
+                              background-color: {tên_màu_}
+                         -Thêm ảnh vào background:
+                              background-image: url("{link_ảnh}")  ===> Hiên thị hình nền 
+                              background-position: center center  ==> nó sẽ làm ảnh  để ở giữa
+                                                  top            ==> Nó sẽ làm ảnh lùi lên trên
+                                                  bottom         ==> Nó sẽ làm ảnh lùi xuống dưới
+                                                  left           ==> Nó sẽ làm ảnh lùi ra bên trái
+                                                  right          ==> Nó sẽ làm ảnh lùi ra bên phải
+                                                  50% 50%        ==> Nó sẽ làm anh ở chính giữa
+                                                  ta cũng có thê kết hợp :  top bottom  lại  với nhau và lệnh khác cũng có thể kết hơpej với nhau
+                              backgroud-size: cover    ==> Phủ kín nền ở web (NẾU ẢNH QUÁ BÉ NÓ SẼ BỊ LẶP) 
+                                             auto     ==> Nó sẽ tự động làm ảnh sao cho phủ hết trên web ( vẫn có thể sdi chuyển ảnh được trên web nếu anh đó to)
+                                             Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
 
-     backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó
-    background-attachment: fixed; ==> Làmảnh đứng yên không di chuyển theo  thanh cuộn xuống
-    ==> Ta cũng có thể viết tắt các thuộc tính bằng cách:
-    vd:  viết ngắn gọn: 
-    background: url('https://th.bing.com/th/id/R.1a496e77b81bace0f6dcd2f4e5026263?rik=WOuKDUqJqV1jFw&riu=http%3a%2f%2fflash24.co.kr%2fg4%2fdata%2fmw.cheditor%2f2206%2f9DqzlUaqHVX28HBlvkPlsJdxG.jpg&ehk=j5Mcc9DqEUC5mQzQFgi4MaVZJjoe6j7IyhlYuoaR2JI%3d&risl=&pid=ImgRaw&r=0') no-repeat center center / cover;
-////////////////////////////////////////////////////////////////////////////
-     width: (tính bằng px hoặc %)
-     hight: (tính bằng px hoặc %)
-- dùng với width  và hight (chiều dài và  rộng  của backgroud)
+                              backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó
+                         background-attachment: fixed; ==> Làmảnh đứng yên không di chuyển theo  thanh cuộn xuống
+          ==> Ta cũng có thể viết tắt các thuộc tính bằng cách:
+                         vd:  viết ngắn gọn: 
+                         background: url('https://th.bing.com/th/id/R.1a496e77b81bace0f6dcd2f4e5026263?rik=WOuKDUqJqV1jFw&riu=http%3a%2f%2fflash24.co.kr%2fg4%2fdata%2fmw.cheditor%2f2206%2f9DqzlUaqHVX28HBlvkPlsJdxG.jpg&ehk=j5Mcc9DqEUC5mQzQFgi4MaVZJjoe6j7IyhlYuoaR2JI%3d&risl=&pid=ImgRaw&r=0') no-repeat center center / cover;
+          ////////////////////////////////////////////////////////////////////////////
+                              width: (tính bằng px hoặc %)
+                              hight: (tính bằng px hoặc %)
+          - dùng với width  và hight (chiều dài và  rộng  của backgroud)
+          ////////////////////////////////////////////////////////////////////////////
+          #gradient (Nó sẽ mix các màu lại  với nhau cho  đẹp  hơn)
+                         - backgroud-image :linear-gradient(to  right bottom, {màu}, màu)
+                    vd css:
+                                        .bg{
+                                                  width: 100px; height: 100px;;
+                                                  background-image: linear-gradient(to left top ,red,blue);  
+                                             }
 
 # THUỘC TÍNH OVERFLOW
      overflow: hidden (nó sẽ làm ẩn đi các khoảng text  bị thừa ra bên ngoài)
@@ -158,6 +174,22 @@ div {
      display : block}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #  CÁC THUỘC TÍNH  FONRT :
+     color:transparent            >> Dùng để làm cho nó không có màu gì hết
+     vd:
+                    .text_trans   {
+                                        font: 100px;
+                                        font-weight: bold;
+                                        background-image: linear-gradient(to  right bottom , rgb(6, 234, 52), rgb(206, 2, 2));
+                                        display: inline-block;
+                                        margin-top: 400 px;
+                                        margin-left: 500px;
+                                        color: transparent;
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        text-transform: uppercase;
+
+                                   }  
+                    >>>>> Nó sẽ làm cho  chữ mix nhiều màu lại  vs nhau
      font-family phong chu 
      font-size :  kich co (%)
      text-align : can chinh chu
@@ -188,9 +220,18 @@ LNK THAM KHẢO : https://youtu.be/d8BrZ12XCXA?si=jqjhUy6GyHQvS6_t
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # SỬ LÝ HÌNH ẢNH:
-     object-fix: cover ; >>>> Phủ kín ảnh với kích thước đã cho 
+     object-fix: cover ; >>>> làm ảnh không bị  méo ,  phủ kín ảnh
      object-position: >>>  muôn hoeenj thị hình ảnh nui  lên phía trên hay  lui  xuống dưới:
                          trên :  top; phải : right ; dưới: bottom ; trái: lenght 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pseudo : tính năng về nhấp chuột và đổi màu
+#pseudo : tính năng nhấp chuột và đổi màu .....
+     :hover{ color:{màu_của_bạn} } >>>  nó sẽ làm cho khi  ta di chuyển vào nó sẽ đổi màu
+     :active { color:{màu_của_bạn} } >>> Khi  ta nhấn vào thì nó sẽ đổi màu
+     :visited{ color:{màu_của_bạn} } >>> Khi ta nhấn vào rồi nó chuyển sang trạng thái một màu khác
+vd css:
+                              .tung:hover{ 
+                                   background-color: yellow;
+                                   color: red;
+                              }
+

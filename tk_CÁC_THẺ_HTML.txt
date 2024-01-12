@@ -33,12 +33,20 @@ tất  cả các thẻ
 
 <img> thêm ảnh vaò web
 ##############################################################################
-<ul><li> <!-- hai cái đi  liền vớinhau-->  in  ra  cac kiểu DẤU CHẤM trước các chữ  
+# SỬ DỤNG  MENNU  BẲNG  UL  VS OL  VÀ LI
+
+
+<ul><li> <!-- hai cái đi  liền vớinhau-->  in  ra  cac kiểu DẤU CHẤM trước các chữ 
+								style=""list-style: square;" >>>  Nó sẽ ra hình vuông
+								style=""list-style: distc;" >>>> Nó sẽ làm hình tròn
+								style=""list-style-image:{tên_ảnh_vủa_bạn}
 ##############################################################################
 <ol stype="1"> dùng để  in ra các số đằng trước các chữ 
 vd: 1 tung
     2 nam......
 ##############################################################################
+# DANH SÁCH ĐỊNH NGHĨA 
+
 <dl> bắt đầu định nghĩa các kiểu văn bản trong gồm:
 	<dl>  
 		<dt>HTML</dt>
@@ -205,7 +213,7 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 	##############################################################################
 	<select>  nó giống như bạn lựa chọn quốc gia của bạn
 	Khi ta dùng <select> thì nó sẽ đi  cùng với <option>
-	vd:
+	vd1 cơ BẢN:
 			<form>
 				<select name="country" id="value">
 					<option value="vietnam">all</option>
@@ -215,6 +223,16 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 				</select>
 			</form>
 		==> select khác với datalist(nd: bên dưới)  là nó k hỗ trợ các tùy chọn  khác
+	vd2 NÂNG CAO: >>>> nó sẽ cũng hiện như vd1  nhưng cho  phép bạn  nhập  tìm kiếm nhanh hơn
+			<form>
+				<label for="">Qua quan</label>
+				<input list="que">
+				<datalist id="que">
+					<option value="Ha Noi">Ha noi</option>
+					<option value="Ha Nam">Ha Nam</option>
+					<option value="Nam Dinh">Nam Dinh</option>
+				</datalist> 
+			</form>
 	##############################################################################
 	<textarea> cho phép được ghi văn bản vô  hạn
 	( đi  với rows: xác định số dòng)
@@ -279,21 +297,24 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 				</optgroup>
 				</select>
 	##############################################################################
-	CÁC THUỘC TÍNH CỦA THẺ <INPUT TYPE>:
-			Thuộc tính value: giá trị khởi tạo cho thẻ nhập input
-			Thuộc tính readonly: chỉ ra thẻ nhập input này là chỉ đọc không sửa được vẫn đc copy
-			Thuộc tính disabled: chỉ ra thẻ nhập input nên bị vô hiệu hoá
-			Thuộc tính size: định nghĩa độ rộng của hộp nhập đơn vị là số ký tự
-			Thuộc tính maxlength: xác định số ký tự tối đa cho phép trong hộp nhập
-			Thuộc tính min và max: xác định giá trị nhỏ nhất và lớn nhất của hộp nhập. 
-			Thuộc tính multiple: xác định người dùng có thể nhập một hoặc nhiều hơn một giá trị nhập vào
-			Thuộc tính pattern: xác định mẫu biểu thức chính quy mà dữ liệu nhập vào sẽ được kiểm tra khi mà form dữ liệu được gửi lên
-			Thuộc tính placeholder: fi thị  nội dung muốn cho người dùng biết trong thanh tìm kiếm
-			Thuộc tính required: xác định dữ liệu bắt buộc phải nhập trước khi gửi dữ liệu được dùng trong select,input,textarea
-			Thuộc tính step: xác định bước nhảy hợp lệ cho hộp nhập 
-						ví dụ step=“2” các số hợp lệ sẽ là -2,0,2,4,… Các dạng dữ liệu hỗ trợ number, range, date,datetime-local, month, time, week. 
-			Thuộc tính autofocus: nó sẽ tự động tạo đặt mặc định con trỏ chuột lên thanh tìm kiếm
-			Thuộc tính height và width xác định độ rộng và cao của hộp nhập ảnh <input type=“image”/>
-			Thuộc tính list ---> datalist chứa các lựa chọn được định nghĩa trước cho thẻ <input>
-			Thuộc tính autocomplete: chỉ ra hộp nhập có chức năng tự động gợi ý nhập là 
-						được bật “on” hoặc tắt “off”. Thuộc tính hoạt động với các loại <input>: text, search, url, tel, email, password, datepickers, range, color
+		CÁC THUỘC TÍNH CỦA THẺ <INPUT TYPE>:
+				Thuộc tính value: giá trị khởi tạo cho thẻ nhập input
+				Thuộc tính readonly: chỉ ra thẻ nhập input này là chỉ đọc không sửa được vẫn đc copy
+				Thuộc tính disabled: chỉ ra thẻ nhập input nên bị vô hiệu hoá
+				Thuộc tính size: định nghĩa độ rộng của hộp nhập đơn vị là số ký tự
+				Thuộc tính maxlength: xác định số ký tự tối đa cho phép trong hộp nhập
+				Thuộc tính min và max: xác định giá trị nhỏ nhất và lớn nhất của hộp nhập. 
+				Thuộc tính multiple: xác định người dùng có thể nhập một hoặc nhiều hơn một giá trị nhập vào
+				Thuộc tính pattern: xác định mẫu biểu thức chính quy mà dữ liệu nhập vào sẽ được kiểm tra khi mà form dữ liệu được gửi lên
+				Thuộc tính placeholder: hien thị  nội dung muốn cho người dùng biết trong thanh tìm kiếm
+								vd : <input type="text" placeholder="Email:">
+				Thuộc tính required: xác định dữ liệu bắt buộc phải nhập trước khi gửi dữ liệu được dùng trong select,input,textarea
+				Thuộc tính step: xác định bước nhảy hợp lệ cho hộp nhập 
+							ví dụ step=“2” các số hợp lệ sẽ là -2,0,2,4,… Các dạng dữ liệu hỗ trợ number, range, date,datetime-local, month, time, week. 
+				Thuộc tính autofocus: nó sẽ tự động tạo đặt mặc định con trỏ chuột lên thanh tìm kiếm
+				Thuộc tính height và width xác định độ rộng và cao của hộp nhập ảnh <input type=“image”/>
+				Thuộc tính list ---> datalist chứa các lựa chọn được định nghĩa trước cho thẻ <input>
+				Thuộc tính autocomplete: chỉ ra hộp nhập có chức năng tự động gợi ý nhập là 
+							được bật “on” hoặc tắt “off”. Thuộc tính hoạt động với các loại <input>: text, search, url, tel, email, password, datepickers, range, color
+###########################
+# THUỘC TÍNH VALUA: DÙNG ĐỂ KHỞI TẠO  CÁC GIÁ TRỊ CHO  THẺ NHẬP  INPUT

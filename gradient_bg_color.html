@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          .bg{
+               width: 100px; height: 100px;;
+               background-image: linear-gradient(to left top ,red,blue);  
+             }
+          .text_trans   {
+               font: 100px;
+               font-weight: bold;
+               background-image: linear-gradient(to  right bottom , rgb(6, 234, 52), rgb(206, 2, 2));
+               display: inline-block;
+               margin-top: 400 px;
+               margin-left: 500px;
+               color: transparent;
+               -webkit-background-clip: text;
+               background-clip: text;
+               text-transform: uppercase;
+
+          }
+     </style>
+</head>
+<body>
+     <div class="bg"></div><br>    
+     <div class="text_trans">thanhtung</div>
+</body>
+</html>
