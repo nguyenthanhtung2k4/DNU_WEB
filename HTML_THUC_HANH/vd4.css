@@ -1,0 +1,54 @@
+body{
+     /* background: url('https://advertisingvietnam.com/wp-content/uploads/2017/12/14-resources-design-.jpg'); */
+     background-position: center;
+     background-size: cover;
+}
+h1{
+     color: aqua;
+     background-color: black;
+     text-align: justify;
+     overflow: hidden;
+}
+h2{color: red;}
+h3{color: rgb(0, 68, 241);
+     background-color: aqua;
+     background-image: linear-gradient(to left bottom ,rgb(8, 237, 88), rgb(237, 245, 0));
+     color: transparent;
+     -webkit-background-clip: text;
+     background-clip: text;
+     display:  inline-block ;
+     text-overflow: ellipsis;
+}
+.padding{
+     background-image: url('https://advertisingvietnam.com/wp-content/uploads/2017/12/14-resources-design-.jpg');
+     padding: 10px;
+     height:  120px;
+     width:  120px;
+     margin-left: 50%;
+     border-radius: 50%;
+     background-position: auto;
+     background-size: cover;
+     
+     
+}
+.text{
+     font-family: Arial, sans-serif;
+     font-family: 'Lemon', serif;
+     margin-left: 48%;
+}
+.center{
+     color:  rebeccapurple;
+     background-color: white;
+
+}
+h1.center{
+     color: aqua;
+     background-color: aliceblue;
+     font-family: 'Lemon', serif;
+
+}
+h3.center{
+     color: red;
+     font-family: 'Lemon', serif;
+
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>dang nhap</title>
+     <style>
+          *{
+               box-sizing: border-box;
+          }
+          form{
+               max-width: 400px;
+               margin: 0 auto;
+               margin-left: 15%;
+               /* text-align: center; */
+
+          }
+          h2{
+               text-align:  center;
+          }
+          input [type="text"],
+          input [type="email"],
+          input [type="password"]{
+               border-radius: 5px;
+               color: white;
+               background-color: antiquewhite;
+               text-align: center;
+               margin-right: 40%;
+          }
+          .dangnhap{
+               margin-bottom: 12px;
+               border: 2px solid black;
+               border-radius: 2px;
+               display:  inline-block;
+               width: 40%;
+          }
+          .send{
+               margin-bottom: 12px;
+          }
+          label{
+               width: 150px;
+               display: inline-block;
+          }
+          .font-type{
+               border: 2px solid rgb(0, 0, 0);
+               border-radius:  5px;
+               background-color: brown;
+               color: white;
+          }.send{
+               background-color: green;
+               border-radius: 5px;
+               width: 100px;height: 35px;
+
+          }.send2{
+               background-color: aquamarine;
+               width: 100px;height: 35px;
+               border-radius: 6px;
+          
+          }
+          .center{
+               margin-left: 20%;
+          }
+          input:checked{
+               outline:3px solid pink;
+          }
+          .tung{
+               width: 150px;
+               
+          }
+          
+     </style>
+</head>
+<body>
+     <div class="dangnhap">
+          <h2>Dang nhap</h2>
+          <form action="dangnhap">
+               <label for="">Full name</label>
+               <input class="font-type" type="text" id="" placeholder="fullname"><br><br>
+               <label for="">User name</label>
+               <input class="font-type" type="email" id="" placeholder="name"><br><br>
+               <label for="">Password</label>
+               <input class="font-type" type="password" id="" placeholder="password"><br><br>
+               <label for="">Gioi  tinh:</label>
+               <input type="radio" id="check" name="check">Nam
+               <input type="radio" id="check" name="check">Nu
+               <br><br>
+               <label class="tung" for="">Coutry: </label>
+               <select name="tung" id="tung">
+                    <option value="vietnam">Vietnam</option>
+                    <option value="usa">Us</option>
+                    </select> <br><br>
+               <label for="">Languge:</label>
+               <input type="checkbox" id="chec2" name="chec2">Viet nam
+               <input type="checkbox" id="chec2" name="chec2">English
+               <input type="checkbox" id="chec2" name="chec2">Japan
+               <br> <br>
+               <p class="center">
+               <input class="send" type="submit" value="submit">
+               <input class="send2" type="button" value="Dang ky">
+               </p>
+          </form>
+
+     </div>
+</body>
+</html>

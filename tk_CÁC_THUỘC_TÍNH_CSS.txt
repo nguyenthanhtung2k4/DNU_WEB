@@ -164,10 +164,14 @@ chúng ta có thể dùng box-sizing:border-box; để tự động áp dụng s
 # DISPLAY: Dùng để xác định hiển thị các phần tử trong HTML và mỗi giá trọ đại diện cho các phần tử khác nhau :
      block: Đối tượng có kích thước rộng bằng với phần tử cha, chiếm toàn bộ chiều rộng của dòng, và sẽ tự động xuống dòng khi phần tử tiếp theo xuất hiện. 
           Ví dụ: div, p, h1, h2, ul, li,…
+          ==> Tự  đọng  xuống dòng sau  phần tử  
      inline: Đối tượng có kích thước chỉ bằng với nội dung của phần tử, không thể chỉnh sửa kích thước, vị trí và định dạng. 
           Ví dụ: span, a, img,…
+          ==>>  giúp các phần tử sau  đó nằm trền cùng 1  dòng
      inline-block: Đối tượng có kích thước như một khối, nhưng lại hiển thị như một nội tuyến. 
           Ví dụ: input, button,…
+          ==> Giúp kích thước của thể label  được cố định theo thuopcj tính with  hight
+     flex: làm cho các phần tử div chạy  theo  chiều ngang  
      none: Đối tượng không hiển thị. Ví dụ: script, style,… 
 vd: 
 div {
