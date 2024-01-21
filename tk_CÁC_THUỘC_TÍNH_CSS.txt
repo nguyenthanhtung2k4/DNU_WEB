@@ -1,7 +1,44 @@
+################################### CÁC  TRANG WEB LIÊN QUAN ĐẾN CSS,  HTML
+WEB-CHECK-CANIUSE: https://caniuse.com/ 
+>>>>>>>>>>>>>>>>> DÙNG ĐỂ CHECK  CÁC THUỘC TÍNH CSS CÓ HỖ TRỢ TRÊN  CÁC TRÌNH DUYỆT KHÔNG
+>>>>>>>>>>>>>>>> LINK  THAM KHẢO: https://youtu.be/HENp_O2-poM?si=2sY8qb8WKsxwJnFv
 ###################################CÁC THUỘC TÍNH CSS
 * :  Là toàn bộ code của soure đó 
 ID= .{tên id}
 CLAAS= #{tên_claas}
+@supports  >>> đây là thuộc tính dùng để check  web mào có hỗ trợ hay  không
+:root     >>>> Thuộc tính này là dùng để đặt biến  .
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# thuộc tính  support:
+vd : nếu trình duyệt hỗ trợ thuộc tính ta có thể dùng--> supporrt
+ font: 100px;
+                    bg.{
+                         font-weight: bold;
+                         display: inline-block;
+                         margin-top: 400 px;
+                         margin-left: 500px;
+                         color: transparent;
+                    } 
+                    @support(-webkit-background-clip: text;){
+                          background-image: linear-gradient(to  right bottom , rgb(6, 234, 52), rgb(206, 2, 2));
+                         -webkit-background-clip: text;
+                         background-clip: text;
+                         text-transform: uppercase;
+                    }     
+     link tham khảo: https://youtu.be/HENp_O2-poM?si=2sY8qb8WKsxwJnFv
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# thuộc tính root: tính năng đặt biến
+          vd: 
+          :root{
+               --tung-color:  blue;
+               --tungphu-color: red;
+          }
+          .thanhtung{
+               color: var(--tung-color)
+          }
+     ==>  Nó sẽ giúp ta thay  đổi các màu chủ đảo của các tổng thể 1 trang web 1 cách dễ dàng hơn 
+          TỪ ĐÓ SẼ GIÚP TA THAY  ĐỔI 1 CÁCH ĐƠN GIẢN HƠN.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # thuộc tính : rounded : 
 >>>> thuộc tính này làm để copy class khác sang class mới của mình:
@@ -43,15 +80,29 @@ CLAAS= #{tên_claas}
                               width: (tính bằng px hoặc %)
                               hight: (tính bằng px hoặc %)
           - dùng với width  và hight (chiều dài và  rộng  của backgroud)
-          ////////////////////////////////////////////////////////////////////////////
-          #gradient (Nó sẽ mix các màu lại  với nhau cho  đẹp  hơn)
-                         - backgroud-image :linear-gradient(to  right bottom, {màu}, màu)
+////////////////////////////////////////////////////////////////////////////
+#gradient (Nó sẽ mix các màu lại  với nhau cho  đẹp  hơn)
+     -CÂU  LỆNH SỬ DỤNG  GRADIENT>>>>  linear-gradient(to  right bottom, {màu}, màu)
                     vd css:
                                         .bg{
                                                   width: 100px; height: 100px;;
                                                   background-image: linear-gradient(to left top ,red,blue);  
                                              }
+                    
+                    VD css( Dùng gradient làm mở ảnh background ):
+                                        bg.{
+                                             background-image: linear-gradient (to left top,red{RGB} , blue{RGB} ),url('{link_anh}');
+                                        }
+                                   >>>>> Sau khi  gradient vào background  ta sẽ có  được ảnh nền và màu xác đè lên với nhau.
+          
+                         * Lưu Ý:  Nếu ta dùng bg đề nên ta phải dùng bảng màu (GRB) mới được.
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# SỬ LÝ HÌNH ẢNH:
+     object-fix: cover ; >>>> làm ảnh không bị  méo ,  phủ kín ảnh
+     object-position: >>>  muôn hoeenj thị hình ảnh nui  lên phía trên hay  lui  xuống dưới:
+                         trên :  top; phải : right ; dưới: bottom ; trái: lenght 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # THUỘC TÍNH OVERFLOW
      overflow: hidden (nó sẽ làm ẩn đi các khoảng text  bị thừa ra bên ngoài)
      overflow: scroll (Nó sẽ tạo ra thanh cuộn )
@@ -193,7 +244,8 @@ div {
                                         text-transform: uppercase;
 
                                    }  
-                    >>>>> Nó sẽ làm cho  chữ mix nhiều màu lại  vs nhau
+     >>>>>>>>>>>>>>>>>>>>>>>>> Nó sẽ làm cho  chữ mix nhiều màu lại  vs nhau
+
      font-family phong chu 
      font-size :  kich co (%)
      text-align : can chinh chu
@@ -222,11 +274,6 @@ div {
 LINK THAM KHẢO:  https://fonts.google.com/
 LNK THAM KHẢO : https://youtu.be/d8BrZ12XCXA?si=jqjhUy6GyHQvS6_t
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# SỬ LÝ HÌNH ẢNH:
-     object-fix: cover ; >>>> làm ảnh không bị  méo ,  phủ kín ảnh
-     object-position: >>>  muôn hoeenj thị hình ảnh nui  lên phía trên hay  lui  xuống dưới:
-                         trên :  top; phải : right ; dưới: bottom ; trái: lenght 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pseudo : tính năng nhấp chuột và đổi màu .....
@@ -238,4 +285,26 @@ vd css:
                                    background-color: yellow;
                                    color: red;
                               }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# cursor :  tính năng này làm cho thuộc tính điều chỉnh con trỏ 
+vd:  css 
+cursor: pointer; >>>> khi ta chỏ vào nó sẽ xuất hiện  hình ngón tay.
+>>>>> Còn rất nhiều các thuộc tính khác nữa.
+link  tham khảo:https://www.w3schools.com/cssref/pr_class_cursor.php
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# box-shadow:Hiệu ứng làm bóng mờ 
+     - box-shadow: Là dành cho  1 khối  
+     - box-shadow: Là dành cho text
+     shadow: {x : y : blur ; scale ; color}
+          x:  la  phải trái 
+          y:  là trên dưới 
+          blur: là độ mờ
+          scale: kích thước bóng  đó
+          color: màu của bóng đó
 
+                    Vd: box-shadow
+                    .tung{
+                         box-shadow: 1px 2px 3px 5px blue ;
+                    }
+     ==>  text-shadow: Cũng dùng như vậy
+     tham khảo: https://youtu.be/77_A9Q819MM?si=SFboM-tGYXIcQeXK
