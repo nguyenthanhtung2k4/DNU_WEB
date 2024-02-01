@@ -149,6 +149,7 @@ CÁCH DÙNG STYLE:  vs tên màu vs font chữ ;
 	link-tham_khao(shadow): https://www.w3schools.com/cssref/playdemo.php?filename=playcss_text-shadow
 	
 	text-direction: none; :dùng để bỏ gạch chân dưới đường link
+	text-direction: underline; :dùng để them gạch chân dưới đường link
 	text-visited:{màu bạn muốn}  khi nhấn vào  và thoát ra nó sẽ hiện link đó màu khác 
 ##############################################################################
 
@@ -318,3 +319,9 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 							được bật “on” hoặc tắt “off”. Thuộc tính hoạt động với các loại <input>: text, search, url, tel, email, password, datepickers, range, color
 ###########################
 # THUỘC TÍNH VALUA: DÙNG ĐỂ KHỞI TẠO  CÁC GIÁ TRỊ CHO  THẺ NHẬP  INPUT
+#####################################################################################
+#thuộc tính: marquee : dùng để chạy chữ như bảng tin.
+		vd html:
+
+     			<marquee behavior="text" direction="text">Nguyen Thanh Tung Dang hoc Code 
+				</marquee>

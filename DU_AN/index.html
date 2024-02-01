@@ -1,58 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Login</title>
-     <style>
-          *{
-               box-sizing: border-box;
-          }
-
-          h1{
-               font-size: 60px;
-               text-align: center;
-               color: rgba(27, 206, 237, 0.666);
-          }
-          .login{
-                width: 300px;
-                height: 290px;
-                background-color: rgba(75, 4, 84, 0.525);
-                border-radius: 10px;
-                margin: 100px auto;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(235, 12, 201, 0.344);
-               color: white;
-          }form{
-               display: inline-block;
-               width: 100%;
-               margin-top: 20px;
-          }
-          label{
-               text-align: center;
-               display: inline;
-               width: 100%;
-               margin-bottom: 5px;
-          }input[type="text"],
-          input[type="password"]{
-               width: 100%;
-               padding: 10px;
-               margin: 5px 0;
-               border: 1px solid #ccc;
-               border-radius: 4px; 
-          }
-          input[type="submit"]{
-               display: block;
-               border: 2px solid blueviolet;
-               border-radius: 5px;
-               padding: 10px 25px;
-               margin-top: 20px;
-               margin: 0 auto;
-          }          
-          body{
-               background-image: url('https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg');
-          }
-     </style>
+     <title>Login</title> 
 </head>
 <body>
      <h1>Login</h1>
@@ -62,10 +17,15 @@
                <input type="text" placeholder="Username">
                <label for="login">Password</label>
                <input type="password" placeholder="Password">
-               <label for="login">Quen mat khau</label>
+               <label for="login">Nho toi</label>
                <input type="checkbox" name="checkname" id="checkid">
+               <label class="quenmk" for="login"><a href="index.html">Quen mat khau?</a></label>
+               <p></p>
                <input type="submit" value="Login">
           </form>
+     </div>
+     <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.120606915695!2d105.75778849999999!3d20.9476712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452eaa9c461c3%3A0x2a3e1c421f299adc!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyDEkOG6oWkgTmFt!5e0!3m2!1svi!2s!4v1705909794818!5m2!1svi!2s" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
      </div>
 </body>
 </html>

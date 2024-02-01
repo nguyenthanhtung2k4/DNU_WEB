@@ -68,10 +68,11 @@ vd : nếu trình duyệt hỗ trợ thuộc tính ta có thể dùng--> supporr
                                                   50% 50%        ==> Nó sẽ làm anh ở chính giữa
                                                   ta cũng có thê kết hợp :  top bottom  lại  với nhau và lệnh khác cũng có thể kết hơpej với nhau
                               backgroud-size: cover    ==> Phủ kín nền ở web (NẾU ẢNH QUÁ BÉ NÓ SẼ BỊ LẶP) 
+                                             contain   ==>  phủ kín kích thước của một thẻ nào nó 
                                              auto     ==> Nó sẽ tự động làm ảnh sao cho phủ hết trên web ( vẫn có thể sdi chuyển ảnh được trên web nếu anh đó to)
                                              Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
 
-                              backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó
+                              backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó và không kèm theo  ảnh khác đè lên chính nó
                          background-attachment: fixed; ==> Làmảnh đứng yên không di chuyển theo  thanh cuộn xuống
           ==> Ta cũng có thể viết tắt các thuộc tính bằng cách:
                          vd:  viết ngắn gọn: 
@@ -147,10 +148,10 @@ vd: min và max
 #THUỘC TÍNH  EM  VÀ REM: THAM KHẢO TRONG FILE CÓ TÊN :tk_Su_Khac_nhau_EM_REM.txt
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #THUỘC TÍNH BORDER: 
-border :5px             >>>> kích thước đường viền
-border-solid            >>>> làm đường viền
-borger-color: {tên_màu} >>>>  thuộc tính sẽ làm thay đổi màu  đường viền
-border: 1px solid black; dùng để làm viền màu đen (Dòng này là viết tắt cho 3 dòng trên)
+     border :5px             >>>> kích thước đường viền
+     border-solid            >>>> làm đường viền
+     borger-color: {tên_màu} >>>>  thuộc tính sẽ làm thay đổi màu  đường viền
+     border: 1px solid black; dùng để làm viền màu đen (Dòng này là viết tắt cho 3 dòng trên)
 
 				border-collapse: collapse;> dùng để làm mất đi  viền to
 				border-radius>:10px ; Dùng để làm bo tròn các viền  bên ngoài bảng( CHỈ NẰM TRONG td,th)
@@ -213,16 +214,19 @@ PADDING : KHÔNG ĐƯỢC DÙNG DẤU ÂM(Vì nó nằm ở bên trong)
 chúng ta có thể dùng box-sizing:border-box; để tự động áp dụng sao cho  các kích thước mik đặt như mong muốn
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # DISPLAY: Dùng để xác định hiển thị các phần tử trong HTML và mỗi giá trọ đại diện cho các phần tử khác nhau :
-     block: Đối tượng có kích thước rộng bằng với phần tử cha, chiếm toàn bộ chiều rộng của dòng, và sẽ tự động xuống dòng khi phần tử tiếp theo xuất hiện. 
+     block     : Đối tượng có kích thước rộng bằng với phần tử cha, chiếm toàn bộ chiều rộng của dòng, và sẽ tự động xuống dòng khi phần tử tiếp theo xuất hiện. 
           Ví dụ: div, p, h1, h2, ul, li,…
-          ==> Tự  đọng  xuống dòng sau  phần tử  
-     inline: Đối tượng có kích thước chỉ bằng với nội dung của phần tử, không thể chỉnh sửa kích thước, vị trí và định dạng. 
+          ==> Tự  đọng  xuống dòng sau  phần tử  va song thẳng hàng với thẻ  bên trên 
+               >> có khai  báo được chiều rộng  và chiều cao.
+     inline    : Đối tượng có kích thước chỉ bằng với nội dung của phần tử, không thể chỉnh sửa kích thước, vị trí và định dạng. 
           Ví dụ: span, a, img,…
-          ==>>  giúp các phần tử sau  đó nằm trền cùng 1  dòng
+          ==>>  giúp các phần tử sau  đó nằm trền cùng 1  dòng 
+               >> không thể khai báo chiều dài chiều rộng
      inline-block: Đối tượng có kích thước như một khối, nhưng lại hiển thị như một nội tuyến. 
           Ví dụ: input, button,…
-          ==> Giúp kích thước của thể label  được cố định theo thuopcj tính with  hight
-     flex: làm cho các phần tử div chạy  theo  chiều ngang  
+          ==> inline-block  sẽ giúp ta thay đôỉ được kích thước dài rộng 
+     list-item :  Nó giống như thẻ <ul><li> 
+     flex: làm cho các phần tử div chạy  theo  chiều ngang và làm  căn song song với nhau  
      none: Đối tượng không hiển thị. Ví dụ: script, style,… 
 vd: 
 div {
@@ -292,8 +296,16 @@ cursor: pointer; >>>> khi ta chỏ vào nó sẽ xuất hiện  hình ngón tay.
 >>>>> Còn rất nhiều các thuộc tính khác nữa.
 link  tham khảo:https://www.w3schools.com/cssref/pr_class_cursor.php
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh: opacity {Làm giảm các màu sắc}
+          ===>  Thuộc tính này làm  có chiếm diện  tích
+#thuoc tinh :  visibility: {Làm ẩn đi các khối block  nhưng vẫn chiếm diện  tích}
+
+==>>> Hai thuộc tính này gần giống nhau  khác nhau  một chút.  T
+Tham khảo thêm ở đây: https://youtu.be/wBycAaQpBtI?si=6ZcN_shi1QH8eRrV
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # box-shadow:Hiệu ứng làm bóng mờ 
-     - box-shadow: Là dành cho  1 khối  
+     - box-shadow: Là dành cho  1 khối 
+     >> cũng có thể dùng bõ shadow[inset] <x> <y><color> ==>>> để nằm bên trong hộp              
      - box-shadow: Là dành cho text
      shadow: {x : y : blur ; scale ; color}
           x:  la  phải trái 
@@ -303,8 +315,157 @@ link  tham khảo:https://www.w3schools.com/cssref/pr_class_cursor.php
           color: màu của bóng đó
 
                     Vd: box-shadow
-                    .tung{
-                         box-shadow: 1px 2px 3px 5px blue ;
-                    }
+                         .tung{
+                              box-shadow: 1px 2px 3px 5px blue ;
+                         }
+                    Vd: shadow
+                         .tung{
+                              box-shadow: inset 0px 0px 4px red;
+                         }
      ==>  text-shadow: Cũng dùng như vậy
      tham khảo: https://youtu.be/77_A9Q819MM?si=SFboM-tGYXIcQeXK
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# child selector : Dùng để thay đổi màu... thay đổi thuộc tính{cùng tên}cùng một lúc với nhau
+     CHILD  CÓ THỂ DÙNG KHI CÁC PHẦN TỬ CÙNG CẤP VỚI NHAU.
+
+               first-child :  Thay đổi thuộc Tính đầu tiên
+               last-child  :  Thay đổi thuộc tính cuối tùng
+               nth-child{số_muốn_thay_đổi}   :  Thay đổi thuôc tính thứ 2 {tính từ trên xuống} 
+               nth-last-child(2)             : Thay đổi thuộc tính {thứ2 từ dưới lên}
+               ==>  Nếu như bạn không muônd thay  đổi 1 cái còn tất cả thuộc tinhds{cùng tên} thay đổi thì ta dùng:
+                    not(first-child)
+                    not(last-child)
+               ==>  Ngoài ra ta cũng có thể thay  đổi  các thuốc tính bằng số chẵn , lẻ :
+                    nth-child(odd) ==>  odd:  là số lẻ
+                    nth-child(even) ==> even: là số chẵn
+               ==>  Cũng có thể dùng bằng thuộc tính n+ tăng dần các phần tử
+                    nth-child(2n+1) ==> n chạy bắt đầu từ 0 ,  tăng dần dần
+          vd bằng css:
+                         tung:first-child{
+                              color:  red;
+                         }
+                         tung:last-child{
+                              color: yerlow;
+                         }
+                         tung:nth-child(2){
+                              color:  blue;
+                         }
+                         tung:not(:fisrt-child){
+                              color: red;
+                         }
+                         tung:nth:child(odd){
+                              color: brow;
+                         }
+          ===> tham khỏa thêm:https://youtu.be/DZbTkRaKzdo?si=Vm1a9PrANjaNMksN
+===> LƯU Ý:  KHI  TA DÙNG CHILD- NÓ CÓ MỘT VẤN ĐỀ NHƯ SAU NẾU TA DÙNG:
+               - NÓ SẼ TÍNH TỪ TRÊN XUỐNG DƯỚI NẾU TA THÊM  THỂ KHÁC LÊN TRƯỚC NÓ , THÌ NÓ SẼ KHÔNG HOẠT ĐỘNG
+               VD:
+                    <ul>
+                       <p>tung1
+                       <li>tung2
+                    </ul>
+               ==> Như vậy thì ta dùng last-child nó sẽ không hoạt động bởi vì nó 
+               có <p>  đứng trước nên  nó k thể hoạt động.{tham khỏa thêm  các thuộc tính child phía trên}
+===>  Chính vì vậy để code không bị  lỗi ta có thể dùng thuộc tính {type} ở phía dưới:
+
+#thuoc tinh type: THAY  ĐỔI CÁC CÁC CSS  CỦA MỘT THUỘC TÍNH 
+
+               first-of-type :  Thay đổi thuộc Tính đầu tiên
+               last-of-type  :  Thay đổi thuộc tính cuối tùng
+               nth-of-type{số_muốn_thay_đổi}   :  Thay đổi thuôc tính thứ 2 {tính từ trên xuống} 
+               nth-last-of-type(2)             : Thay đổi thuộc tính {thứ2 từ dưới lên}
+               ==>  Nếu như bạn không muônd thay  đổi 1 cái còn tất cả thuộc tinhds{cùng tên} thay đổi thì ta dùng:
+                    not(first-of-type)
+                    not(last-of-type)
+               ==>  Ngoài ra ta cũng có thể thay  đổi  các thuốc tính bằng số chẵn , lẻ :
+                    nth-of-type(odd) ==>  odd:  là số lẻ
+                    nth-of-type(even) ==> even: là số chẵn
+               ==>  Cũng có thể dùng bằng thuộc tính n+ tăng dần các phần tử
+                    nth-of-type(2n+1) ==> n chạy bắt đầu từ 0 ,  tăng dần dần
+          ==>  Ví  dụ  css  giống  phần child bên trên
+==> KHI TA SỬ DỤNG  CÁC PHẦN TỬ TYPE  NÓ  SẼ DỄ DÀNg THAY  ĐỔI ĐƯỢC CÁC PHẦN TỬ CÙNG CẤP HƠN.
+NGOÀI RA CŨNG CÓ THỂ THÊM CÁC PHẦN TỬ KHÁC CÙNG CẤP MÀ KHÔNG SỢ  BỊ LỖI CODE 
+
+~ lỜI KHUYÊN:  Chúng ta nên dùng  type để thay  đôit các phần tử cùng cấp một cách  nhanh nhất.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#SELECTOR :  NÂNG CAO
+THAM KHẢO THÊM Ở ĐÂY:https://www.w3schools.com/cssref/css_selectors.php
+VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
+     a[href^="https"]    : Lấy phần đầu  {^}
+     a[href$=".pdf"]     :lấy phần chân  {$}
+     a[href*="w3schools"] : lấy phần thân  {*}
+     first-letter : lấy kí tự đầu tiên
+     first-inline : lấy cả dòng
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh:  transition (cho  phép  bạn thay  đổi màu, nền một cách trơn tru hơn)
+               transition:{chiều_dài_rộng_vs_tgian}
+               transition-delay
+               transition-duration
+               transition-property
+               transition-timing-function
+          vd css:
+                    div {
+                         width: 100px;
+                         height: 100px;
+                         background: red;
+                         transition: width 2s;
+                         }
+                    div:hover {
+                         width: 300px;
+                         }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh  flaot , clear: hiệu  ứng thả nổi
+     clear:both | right | left
+     float:left|right|none
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh: transform >>>  Nó sẽ giúp vật thể đó thay đổi kích thước và không làm ảnh hưởng đến kích thước của vật thể khác.
+                       >>>  Nói một cách khác thì transform có thẻ đè nền vật thể khác và không làm thay đổi của vật thể kia.
+                       >>>  Ngoài ra nó cũng có thể xoay  được chiều dọc ,ngang.....
+
+                       transform: scaleX({số_muốnthay_đổi}) >>>> X là thay  đổi chiều ngang
+                                  scaleY()                  >>>> Y là thay  đổi chiều  dọc
+                                  ==> Viết tắt : scale({số_muốnthay_đổi}{Số_muốnthay_đổi})
+                                  rotate(45deg)             >>>>là thay  xoay chiều của vật thể đó thành 45 độ.  Ngoài ra nó có x,y,z
+                                  skew(x,y)                 >>>> Nó sẽ xoay  thành hình bình hành. 
+                                  translate(x, y)           >>>> Thêm  vào giữa đó  một số pixel x,y nên tính theo phần trăm  %
+                                                            ==> Giống như  margin nhung nó lại  không thay  đổi vị trí của nó . Nó chỉ hiện lùi ra bên ngoài mà thôi .
+                    
+                    vd: css
+
+                              tung{
+                                   transform: scale(2); /// no  se tang gap  doi  kich  thuoc
+                                   transform: rotate(45deg);
+                                   transform: skew(20deg,10deg);
+                              }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh: position >>> Nó gần giống với transform  nhưng nó lại không thay đổi thể  xoay được.
+                      ==> Nó chỉ làm được thuộc tính top,  bottom,  left ,right,Nó cũng không thay đổi vật thể khác, nó chỉ ĐÈ nên vật thể khác.
+                    static    : Đây là giá trị mặc định, các phần tử sẽ nằm theo thứ tự của văn bản và không thể sử dụng các thuộc tính top, bottom, left, right để điều chỉnh vị trí.
+đc dùng nhiều->     relative  : Đây là giá trị cho phép bạn di chuyển các phần tử tương đối so với vị trí ban đầu của chúng, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này không ảnh hưởng đến các phần tử xung quanh.
+đc dùng nhiều->     absolute  : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, hoặc cửa sổ trình duyệt nếu không có phần tử cha nào. Vị trí này sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
+đc dùng nhiều->     fixed     : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ không thay đổi khi bạn cuộn trang, và sẽ luôn dựa vào cửa sổ trình duyệt. Vị trí này cũng sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
+                    sticky    : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí dính trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ giống như vị trí relative khi bạn không cuộn trang, nhưng sẽ giống như vị trí fixed khi bạn cuộn trang đến một ngưỡng nhất định. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, và sẽ không làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.                    vd : css
+                              tung{
+                                   position: relative; 
+                                   top:10px;
+                                   right:10px;
+                              }
+                              ==>  Các ví dụ khác cũng phải có Position và có một trong top,  bottom,  right, left.
+     ==> THAM KHẢO THÊM  Ở FILE HTML{position.html}
+     Link: https://www.w3schools.com/Css/css_positioning.asp
+     ###########################################################################################################
+     - SỬ DỤNG  THUỘC TÍNH POSITION  VS TRANSFORM --> CĂN RA GIỮA. (CENTER)
+               VD: 
+                    .tung{
+                         position: absolute;
+                         top:50%;left:50%;
+                         transform:translate(-50%,-50%);
+                    }
+                    ==> KHI  TA SU DUNG CODE  TREN THI NO SE CAN RA  GIUA - CENTER.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh:z-index
+          Thuộc tính z-index trong CSS được sử dụng để thiết lập thứ tự xếp chồng nhau của một thành phần vị trí trên trang web.
+          Thứ tự chồng nhau được sắp xếp dựa theo giá trị số, thành phần HTML nào có chỉ số z-index cao hơn sẽ nằm trên, ngược lại sẽ nằm dưới, giá trị mặc định là 01. Giá trị z-index càng cao, phần tử sẽ hiển thị trên cùng, che phần tử có giá trị z-index thấp hơn
+          

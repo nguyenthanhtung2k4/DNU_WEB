@@ -1,0 +1,5 @@
+Mức độ  ưu tiên  của CSS là :
+
+     Tag < Class < ID <  !important  < Inline 
+     ==>Có thể sử dụng `!important` khi bạn bí quá không biết  sửa lỗi ở đâu  nên mới dùng.  KHông nên sử dụng  Important lạn  dụng khiến code khó sửa hơn .
+     ==> Inline là ta viết trực tiếp vào style  vào Html .

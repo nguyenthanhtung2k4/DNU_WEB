@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>RegistrationForm</title>
+     <style>
+          form{
+               margin-top: 40px;
+               /* padding-: 200px; */
+          }
+          label{ 
+               font-weight: bold;
+          }
+          .fist{
+               display: block;
+          }
+          .lastname{
+               margin-left: 20px;
+               display: block;
+          }
+          input{
+               /* display: block; */
+               margin-left: 1px;
+               background-color: rgba(162, 165, 167, 0.273);
+               border: 20px;
+               box-shadow: 0px 0px 3px 1px rgba(162, 165, 167, 0.273)  ;
+               height: 30px; width: 200px;
+          }
+          .login{
+               display: flex ;
+               margin-top: 12px;
+          }
+          input[type="radio"]{
+               display: inline-block;
+               height: 10px;width: auto;
+          }
+          .birthday{
+               display: block;
+          }
+          .gender{
+               margin-left: 20px;
+               display: block;
+          }
+          .radio{
+               display: block;
+          }
+          .display{
+               display: block ;
+          }
+          .select{
+               height: 35px;width: 440px;
+          }
+          .submit{
+               display: block;
+               margin-top: 20px;
+               background-color: blue;
+               color: white;
+               border-radius: 8px;
+               font-size: 15px;
+               height: 35px;
+               width: 100px;
+          }
+          .tong{
+               /* margin: 0 auto; */
+               border: 3px solid rgb(171, 20, 177);
+               border-radius: 10px;
+               padding: 45px;
+               height: auto;width: auto;
+               display: inline-block;
+               
+               /* text-align: cen; */
+          }
+          body{
+               margin-left: 29%;
+               margin-top: 40px;
+          }
+
+     </style>
+</head>
+<body>
+     <div class="tong">
+          <div class="tong2">
+          <h2>RegistrationForm</h2>
+          <form action="login">
+               <div class="login">
+               <div class="name">
+                    <label class="fist" for="firstName">First Name</label>
+                    <input class="fist" type="text" id="firstName" placeholder="Your first name..">
+                    
+               </div>
+               <div class="name2">
+                    <label class="lastname" for="lastName">Last Name</label>
+                    <input class="lastname" type="text" id="lastName" placeholder="Your last name..">
+               </div></div>
+               <div class="login">
+                    <div class="birthday">
+                         <label class="birthday" for="birthday">Birthday</label>
+                         <input type="month">
+                    </div>
+                    <div class="gender">
+                         <label class="radio" for="gender">Gender</label>
+                         <input type="radio" id="check" name="check">
+                         <label for="checkbox">Male</label>
+                         <input class="radio" type="radio" id="check" name="check">
+                         <label for="checkbox">Famale</label>
+                    </div></div>
+                    <div class="login">
+                         <div class="display">
+                              <label class="display" for="mail">Email</label>
+                              <input class="display" type="email">
+                              
+                         </div>
+                         <div class="display">
+                              <label class="gender" for="phone">Phone Number</label>
+                              <input class="gender" type="tel">
+                         </div>
+                    </div>
+                    <div class="login">
+                         <label class="selection" for="subject">Subject</label>
+                    </div>
+                    <select class="select" name="select" id="select">
+                         <option value="select">Choose option</option>
+                    </select>
+                    <input class="submit" type="submit">
+          </form>
+     </div></div>
+</body>
+</html>
