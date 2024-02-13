@@ -443,8 +443,10 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
 #thuoc tinh: position >>> Nó gần giống với transform  nhưng nó lại không thay đổi thể  xoay được.
                       ==> Nó chỉ làm được thuộc tính top,  bottom,  left ,right,Nó cũng không thay đổi vật thể khác, nó chỉ ĐÈ nên vật thể khác.
                     static    : Đây là giá trị mặc định, các phần tử sẽ nằm theo thứ tự của văn bản và không thể sử dụng các thuộc tính top, bottom, left, right để điều chỉnh vị trí.
+                    ==>       Static không áp dụng  cho absolute.
 đc dùng nhiều->     relative  : Đây là giá trị cho phép bạn di chuyển các phần tử tương đối so với vị trí ban đầu của chúng, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này không ảnh hưởng đến các phần tử xung quanh.
-đc dùng nhiều->     absolute  : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, hoặc cửa sổ trình duyệt nếu không có phần tử cha nào. Vị trí này sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
+đc dùng nhiều->     absolute  : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, hoặc cửa sổ trình duyệt nếu không có phần tử cha nào.
+                    ==>       Vị trí này sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
 đc dùng nhiều->     fixed     : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ không thay đổi khi bạn cuộn trang, và sẽ luôn dựa vào cửa sổ trình duyệt. Vị trí này cũng sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
                     sticky    : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí dính trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ giống như vị trí relative khi bạn không cuộn trang, nhưng sẽ giống như vị trí fixed khi bạn cuộn trang đến một ngưỡng nhất định. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, và sẽ không làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.                    vd : css
                               tung{
@@ -460,7 +462,8 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
                VD: 
                     .tung{
                          position: absolute;
-                         top:50%;left:50%;
+                         top:50%;
+                         left:50%;
                          transform:translate(-50%,-50%);
                     }
                     ==> KHI  TA SU DUNG CODE  TREN THI NO SE CAN RA  GIUA - CENTER.
@@ -468,4 +471,79 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
 #thuoc tinh:z-index
           Thuộc tính z-index trong CSS được sử dụng để thiết lập thứ tự xếp chồng nhau của một thành phần vị trí trên trang web.
           Thứ tự chồng nhau được sắp xếp dựa theo giá trị số, thành phần HTML nào có chỉ số z-index cao hơn sẽ nằm trên, ngược lại sẽ nằm dưới, giá trị mặc định là 01. Giá trị z-index càng cao, phần tử sẽ hiển thị trên cùng, che phần tử có giá trị z-index thấp hơn
-          
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#thuoc tinh: before vs after: Cho phép bạn làm biện pháp CSS  trước hoặc sau nội dung hiển thị của element.
+     before:  là phía trước.
+     after:   là phía sau.
+     VD:
+          .tung:after 
+          {
+                content:"Viet Nam";
+                font-size:50px;
+                color:#f60;
+                position:relative;
+                z-index:99;
+
+                &::before {
+                      content:"Hello ";
+                      color:#06f;
+                }
+          }
+     ==> Đây chỉ là một phần app  dụng  before  vs  after vào ví  dụ  nó còn đc sử dụng vào nhiều trong css nhiều hơn nữa.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+NÂNG CAO CÁC THUỘC TÍNH.
+CÁC THUỘC TÍNH  CẦN LƯU Ý  KHI  DÙNG ĐỂ CÓ THỂ NHANH VIẾT CODE NAHNH HƠN LOGIC :
+     inherit:  Kế thừa giá trị từ phần tử cha gần nhất
+               ==>color: inherit; sẽ kế thừa màu chữ từ phần tử cha
+
+     initial:	Đặt lại giá trị mặc định của thuộc tính (style gốc)
+               ==>display: initial; sẽ đặt lại kiểu hiển thị là inline
+
+     unset  :	Kế thừa hoặc đặt lại giá trị tùy theo kiểu thuộc tính
+               ==>font-size: unset; sẽ kế thừa cỡ chữ từ phần tử cha nếu font-size là thuộc tính kế thừa, hoặc đặt lại cỡ chữ mặc định nếu font-size là thuộc tính không kế thừa
+
+               vd:css
+                         .container {
+                         display: flex;
+                         flex-wrap: wrap;
+                         width: 80%;
+                         margin: 20px auto;
+                         }
+                         .tung {
+                         width: 25%;
+                         height: 200px;
+                         border: 5px solid black;
+                         background-color: yellow;
+                         }
+
+                         .tung p {
+                         font-size: 20px;
+                         text-align: center;
+                         line-height: 200px;
+                         }
+
+                         .tung.one {
+                         border-color: inherit;
+                         }
+
+                         .tung.two {
+                         border-color: initial;
+                         }
+
+                         .tung.three {
+                         border-color: unset;
+                         }
+     
+
+     currentColor:  Là một giá trị CSS đặc biệt, nó lấy giá trị của thuộc tính color của phần tử đó hoặc phần tử gần nó
+               ===>NÓ SẼ KHÁC VỚI INHERIT LÀ CÓ THỂ KẾ THỪA CHÍNH NÓ.
+                    VD: CSS
+                         .tung{
+                         color: gold; /* Màu chữ vàng */
+                         border: 10px solid currentColor; /* Màu vành đai vàng */
+                         box-shadow: 0px 0px 15px currentColor; /* Màu bóng đổ vàng */
+                         width: 200px;
+                         height: 200px;
+                         border-radius: 50%;
+                         }
+     transparent   : Giá trị alpha của màu sắc là 0, nghĩa là không có màu sắc.

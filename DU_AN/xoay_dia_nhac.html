@@ -40,6 +40,30 @@
           #name.Play{
                padding-left: 200px;
           }
+          .bar{
+               width: 90%;height:5px;
+               background-color: hsl(0, 0%, 62%);
+               border-radius: 23px;
+               margin-left: 20px;
+               margin-top: 12px;
+               position: relative;
+
+          }
+          .bar-noco{
+               width: 50%;height: 100%;
+               background-color: aqua;
+               border-radius: inherit;
+          }
+          .bar-tron{
+               width: 10px;height: 10px;
+               background-color: aqua;
+               position: absolute;
+               border-radius: 50%;
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%,-50%);
+
+          }
 /* 
 Thuộc tính animation được sử dụng để tạo hiệu ứng động cho các phần tử HTML.
 Thuộc tính này có các giá trị sau:
@@ -59,6 +83,10 @@ Trong trường hợp này, hoạt ảnh sẽ xoay hình tròn từ 0 độ đ�
      <div class="boder1"><a href="https://youtube.com"><p class="boder"></p></a></div>
      <div class="play">
           <div id="name" class="Play">nơi này có anh </div>
+          <div class="bar">
+               <div class="bar-noco"></div>
+               <div class="bar-tron"></div>
+          </div>
      </div>
 </body>
 </html>
