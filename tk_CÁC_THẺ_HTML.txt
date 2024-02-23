@@ -325,3 +325,6 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 
      			<marquee behavior="text" direction="text">Nguyen Thanh Tung Dang hoc Code 
 				</marquee>
+#####################################################################################
+# the meta :
+	<meta></meat>

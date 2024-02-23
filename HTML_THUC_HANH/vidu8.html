@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DNU</title>
+     <style>
+          :root{
+               --mauNen-color: orange;
+               --den-color: black;
+          }
+          h1{
+               text-transform: uppercase;
+               color: var(--den-color);
+               text-align: center;
+          }
+          p#text{
+               text-transform: uppercase;
+               color: var(--mauNen-color);
+               font-weight: bold;
+          }
+          #contact{
+               border: 1px solid black;
+               height: 90%;
+               width: 90%;
+               margin: 0 auto;
+               display: block;
+          }
+          .tung{
+               display: flex;
+          }
+          .map{
+               margin-left: 2%;
+          }
+          .tag{
+               margin-left: 5%;
+               margin-top: 10%;
+               padding: 3% 7%;
+               display: inline-block;
+
+          }
+          input{
+               width: 100%;
+               height: 25px;
+               margin-bottom: 10%;
+
+          }
+
+          .sub{
+               color: black;
+               background-color: orange;
+               border-radius: 3px;
+               margin-right: 100% ;
+               width: 80%;
+               height: 25px;
+               margin-left: 13%;
+               text-align: center;
+               cursor: pointer;
+          }
+          textarea{
+               width: 100%;
+          }
+     </style>
+</head>
+<body>
+     <h1>liên hệ với chúng tôi</h1>
+     <div id="contact">
+          <div class="tung">
+          <div class="map">
+               <p id="text">Trường Đai học đại nam</p>
+               <p>Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+               <p>Điện Thoại: (024)335577799</p>
+               <p>Email: dnu@dainam.edu.vn</p>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.120482672035!2d105.75521357471217!3d20.947676190559616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452eaa9c461c3%3A0x2a3e1c421f299adc!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyDEkOG6oWkgTmFt!5e0!3m2!1svi!2s!4v1708676680094!5m2!1svi!2s" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+          <div>
+          <div class="tag">
+               <div class="name"><input type="text" placeholder="Họ và tên"></div>
+               <div class="email"><input type="text" placeholder="Email của bạn"></div>
+               <div class="tel"><input type="tel" placeholder="Phone của bạn"></div>
+               <div class="text"><input type="text" placeholder="Tieu de của bạn"></div>
+               <textarea name="content" rows="8" cols="45" placeholder="Nội dung"></textarea>
+          </div>
+               <div class="submit"><input type="submit" name="submit" id="submit" value="Gui" class="sub"></div></div>
+          </div>
+     </div>
+</body>
+</html>

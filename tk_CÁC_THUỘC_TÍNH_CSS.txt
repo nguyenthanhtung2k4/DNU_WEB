@@ -8,6 +8,20 @@ ID= .{tên id}
 CLAAS= #{tên_claas}
 @supports  >>> đây là thuộc tính dùng để check  web mào có hỗ trợ hay  không
 :root     >>>> Thuộc tính này là dùng để đặt biến  .
+@media    >>>> Nó sẽ điều chỉnh lại  nếu kích thước bé hơn nó sẽ thay đổi : màu sắc , kích  thức ,  backgroud....
+               vd:
+                    body{
+                         background-color: black;
+                         color: white;
+                    }
+                    @media screen and (max-width: 1000px){
+                         body{
+                              background-color: aqua;
+                              color: black;
+                         }
+                    }
+               * thiết  bị : max-width: 320px chiều dọc di động
+                                        480px chiều ngang điện thoại  di động
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # thuộc tính  support:
@@ -70,7 +84,7 @@ vd : nếu trình duyệt hỗ trợ thuộc tính ta có thể dùng--> supporr
                               backgroud-size: cover    ==> Phủ kín nền ở web (NẾU ẢNH QUÁ BÉ NÓ SẼ BỊ LẶP) 
                                              contain   ==>  phủ kín kích thước của một thẻ nào nó 
                                              auto     ==> Nó sẽ tự động làm ảnh sao cho phủ hết trên web ( vẫn có thể sdi chuyển ảnh được trên web nếu anh đó to)
-                                             Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
+                                        *Ngoài ra ta cũng có thể dùng các lệnh  như px, % .... 
 
                               backgroud-repeat: no-repeat ==> Nó sẽ lấy ảnh đúng vị trí chính xác của nó và không kèm theo  ảnh khác đè lên chính nó
                          background-attachment: fixed; ==> Làmảnh đứng yên không di chuyển theo  thanh cuộn xuống
@@ -547,3 +561,13 @@ CÁC THUỘC TÍNH  CẦN LƯU Ý  KHI  DÙNG ĐỂ CÓ THỂ NHANH VIẾT CODE 
                          border-radius: 50%;
                          }
      transparent   : Giá trị alpha của màu sắc là 0, nghĩa là không có màu sắc.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+TÌM  HIỂU THÊM VỀ CÁCH CHIA CÁC CỘT ĐÊ LÀM CÁC SLINE  SONG SONG VỚI NHAU,  THẲNG HÀNG NHAU.
+
+ Cach chia cot hang trong html:    
+     columw        :https://www.w3schools.com/howto/howto_js_list_grid_view.asp
+     gird -view     https://www.w3schools.com/css/css3_multiple_columns.asp
+
