@@ -96,6 +96,14 @@ vd : nếu trình duyệt hỗ trợ thuộc tính ta có thể dùng--> supporr
                               hight: (tính bằng px hoặc %)
           - dùng với width  và hight (chiều dài và  rộng  của backgroud)
 ////////////////////////////////////////////////////////////////////////////
+#Phối tỷ lệ màu với nhau: radial-gradient
+     vd: CSS
+          .body{
+                    background: rgb(2,0,36);
+                    background: radial-gradient(circle, rgba(2,0,36,1) 10%, rgba(41,87,97,1) 100%, rgba(26,9,121,1) 100%);
+          }
+          ==> link tham khảo :https://www.w3schools.com/css/css3_gradients_radial.asp
+////////////////////////////////////////////////////////////////////////////
 #gradient (Nó sẽ mix các màu lại  với nhau cho  đẹp  hơn)
      -CÂU  LỆNH SỬ DỤNG  GRADIENT>>>>  linear-gradient(to  right bottom, {màu}, màu)
                     vd css:
@@ -118,12 +126,34 @@ vd : nếu trình duyệt hỗ trợ thuộc tính ta có thể dùng--> supporr
      object-position: >>>  muôn hoeenj thị hình ảnh nui  lên phía trên hay  lui  xuống dưới:
                          trên :  top; phải : right ; dưới: bottom ; trái: lenght 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# SỬ LÝ  ẢNH LÀM MỜ ĐI:
+     fillter: blur(5px);                     ==>  Làm ảnh mờ đi 
+     filter: brightness(200%);               ==> Làm ảnh sáng
+     filter: contrast(200%);                 ==> Làm ảnh đậm
+     filter: drop-shadow(8px 8px 10px gray); ==> ảnh đạm tối
+     filter: grayscale(100%);                ==> ảnh đen trắng
+     filter: hue-rotate(90deg);
+     filter: invert(100%);
+     filter: opacity(30%);
+     filter: saturate(8);
+     filter: sepia(100%);
+     filter: contrast(200%) brightness(150%);
+
+               LINK  THAM KHẢO- TEST: https://www.w3schools.com/cssref/playdemo.php?filename=playcss_filter
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # THUỘC TÍNH OVERFLOW
      overflow: hidden (nó sẽ làm ẩn đi các khoảng text  bị thừa ra bên ngoài)
      overflow: scroll (Nó sẽ tạo ra thanh cuộn )
      overflow: auto (Giá autotrị tương tự như scroll, nhưng nó chỉ thêm thanh cuộn khi cần thiết)
      ==> auto== scroll
      ==> ngoài ra nó còn có overflow-x ; overflow-y (x: rộng ;  y là dài)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#scroll-behavior : Hiệu ứng cuộn thanh cuộn xuống 
+                     scroll-behavior: smooth ===> Làm mượt mà và cuộn cho  đẹp hơn 
+                                      auto   ===> Hiệu ứng cuộn nhẩy thẳng ra trang muốn
+                                      initial===> Mặc định  
+                                      inherit==> Kế thừa thuộc tính từ phần tử cha của nó
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 vd:
                     -----------------CSS------------------------
@@ -266,6 +296,7 @@ div {
 
      font-family phong chu 
      font-size :  kich co (%)
+     justify : căn chỉnh ở hai  bên
      text-align : can chinh chu
                     (trai left;  giua: center ; phai: right; căn đều 2 bên: justify)
 	font-weight: dùng để ghi  chữ in đâm (font-weight: bold :IN ĐẬM CHỮ ; font-weight: 900 :DÙNG ĐỂ LÀM TO CHỮ  )
@@ -338,6 +369,13 @@ Tham khảo thêm ở đây: https://youtu.be/wBycAaQpBtI?si=6ZcN_shi1QH8eRrV
                          }
      ==>  text-shadow: Cũng dùng như vậy
      tham khảo: https://youtu.be/77_A9Q819MM?si=SFboM-tGYXIcQeXK
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+user-select: none | auto | text | contain | all;
+            ===> Giúp  can thiệp vào các text
+               user-select: none --> không cho  người dùng copy
+                          : auto --> tùy thuộc 
+                          : text --> Cho phép người dùng chọn và sao chép văn bản, nhưng không cho phép chọn các phần tử khác như hình ảnh.
+                          : all  --> Cho phép người dùng chọn và sao chép cả văn bản và các phần tử khác.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # child selector : Dùng để thay đổi màu... thay đổi thuộc tính{cùng tên}cùng một lúc với nhau
      CHILD  CÓ THỂ DÙNG KHI CÁC PHẦN TỬ CÙNG CẤP VỚI NHAU.
@@ -462,12 +500,24 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
 đc dùng nhiều->     absolute  : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, hoặc cửa sổ trình duyệt nếu không có phần tử cha nào.
                     ==>       Vị trí này sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
 đc dùng nhiều->     fixed     : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí cố định trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ không thay đổi khi bạn cuộn trang, và sẽ luôn dựa vào cửa sổ trình duyệt. Vị trí này cũng sẽ làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.
-                    sticky    : Đây là giá trị cho phép bạn đặt các phần tử tại một vị trí dính trên màn hình, bằng cách sử dụng các thuộc tính top, bottom, left, right. Vị trí này sẽ giống như vị trí relative khi bạn không cuộn trang, nhưng sẽ giống như vị trí fixed khi bạn cuộn trang đến một ngưỡng nhất định. Vị trí này sẽ phụ thuộc vào phần tử cha gần nhất có thuộc tính position khác static, và sẽ không làm cho các phần tử bị loại bỏ khỏi luồng bố cục thông thường.                    vd : css
-                              tung{
-                                   position: relative; 
-                                   top:10px;
-                                   right:10px;
-                              }
+                    sticky    : Một phần tử có vị trí: dính; được định vị dựa trên vị trí cuộn của người dùng. Phần tử cố định chuyển đổi giữa tương đối và cố định, tùy thuộc vào vị trí cuộn. Nó được định vị tương đối cho đến khi gặp một vị trí bù nhất định trong khung nhìn - sau đó nó "cố định" tại chỗ (như vị trí: cố định).
+                              ==> Vị trí này cho phép bạn khi  cuộn thah  nên thì nó sẽ cố định nhất định tại một vị trí nào đó.
+
+                              vd  : css sticky:
+                                   tung{
+                                        position: -webkit-sticky;
+                                        position: sticky;
+                                        top: 0;
+                                        padding: 5px;
+                                        background-color: #cae8ca;
+                                        border: 2px solid #4CAF50;
+                                   }
+                                   vd : 2css
+                                   tung{
+                                        position: relative; 
+                                        top:10px;
+                                        right:10px;
+                                   }
                               ==>  Các ví dụ khác cũng phải có Position và có một trong top,  bottom,  right, left.
      ==> THAM KHẢO THÊM  Ở FILE HTML{position.html}
      Link: https://www.w3schools.com/Css/css_positioning.asp
@@ -481,6 +531,11 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
                          transform:translate(-50%,-50%);
                     }
                     ==> KHI  TA SU DUNG CODE  TREN THI NO SE CAN RA  GIUA - CENTER.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#Căn ra giữa(Center)
+                    flex-wrap: wrap; /* Cho phép các phần tử con tràn qua hàng mới khi cần */
+                    justify-content: center; /* Căn chỉnh các phần tử con theo chiều ngang */
+                    transform:translate(-50%,-50%);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #thuoc tinh:z-index
           Thuộc tính z-index trong CSS được sử dụng để thiết lập thứ tự xếp chồng nhau của một thành phần vị trí trên trang web.
@@ -504,6 +559,7 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
                 }
           }
      ==> Đây chỉ là một phần app  dụng  before  vs  after vào ví  dụ  nó còn đc sử dụng vào nhiều trong css nhiều hơn nữa.
+     link tham khao: https://www.youtube.com/watch?v=ARsb10UsfX4&list=PLd8OdiciAE1SwMCtd6XgYp-ei1or6sb1r&index=56
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 NÂNG CAO CÁC THUỘC TÍNH.
 CÁC THUỘC TÍNH  CẦN LƯU Ý  KHI  DÙNG ĐỂ CÓ THỂ NHANH VIẾT CODE NAHNH HƠN LOGIC :
@@ -570,4 +626,6 @@ TÌM  HIỂU THÊM VỀ CÁCH CHIA CÁC CỘT ĐÊ LÀM CÁC SLINE  SONG SONG V�
  Cach chia cot hang trong html:    
      columw        :https://www.w3schools.com/howto/howto_js_list_grid_view.asp
      gird -view     https://www.w3schools.com/css/css3_multiple_columns.asp
+     display:gird  >>> Nó sẽ tự động chia kích thuốc của các ô vuôn , tam giác
+     link tham khảo:  https://www.youtube.com/watch?v=hJHQVpv6-Z8
 

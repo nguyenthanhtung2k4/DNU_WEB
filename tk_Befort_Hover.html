@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Button</title>
+<style>
+.shop {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2em;
+    text-align: center;
+    background-color: white;
+    border: 1px solid orange;
+    margin: 5em;
+    transition: color 0.25s linear;
+    position: relative;
+    z-index: 1;
+}
+
+.shop:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    z-index: -1;
+    transition: width 0.3s linear;
+}
+
+.shop:hover:before {
+    width: 100%;
+}
+
+.shop:hover {
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<p class="shop">shop</p>
+
+</body>
+</html>

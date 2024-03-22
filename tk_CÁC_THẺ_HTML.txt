@@ -33,6 +33,11 @@ tất  cả các thẻ
 
 <img> thêm ảnh vaò web
 ##############################################################################
+# Tham khảo làm Menu Ngang:  Với ul ,li
+			https://cafe.net.vn/media/catalog/product/cache/f650724451860877a45386b8b081a692/5/0/5000984.jpg
+			https://thachpham.com/web-development/html-css/ky-thuat-tao-menu-ngang-css.html
+			https://thachpham.com/web-development/html-css/tao-menu-doc-co-ban.html
+##############################################################################
 # SỬ DỤNG  MENNU  BẲNG  UL  VS OL  VÀ LI
 
 
@@ -182,8 +187,32 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 	<input type>
 	CÁC THẺ CHỨA THÀNH PHẦN INTPUT TYPE
 					<input type=“button”> LÀ NÚT BẤM>> KHI TA BẤM VÀO SẼ HIỆN RA THÔNG BÁO
+				==============================================================================================
 					<input type=“checkbox”> HIỆN RA NÚT  Ô VUÔNG ĐỂ TÍCH
 					<input type=“radio”>    HIỆN RA NÚT HÌNH TRÒN ĐỂ TÍCH
+							vd: css 
+								.Star-Tong-Text {
+								display: flex;
+								align-items: center;
+								}
+								
+								.star-label {
+								cursor: pointer;
+								}
+								
+								.star-label:hover .star{
+								color: aqua;
+								}
+								input[type="radio"]:checked ~ .star-label .star {
+								color: gold;
+								}
+								
+								input[type="radio"] {
+								display: none;
+								}
+		==> :checked sẽ chỉ áp dụng cho radio button được chọn trong nhóm đó. Điều này cho phép bạn 
+						thực hiện các biến đổi CSS dựa trên lựa chọn của người dùng trong một nhóm radio buttons.
+					=========================================================================================================
 					<input type=“color”> HIỆN RA MÀU NỀN CỦA NÚT BẤM 
 					
 					<input type=“text”> HIỆN RA Ô CHỮ NHẬT ĐỂ NHẬP TEXT

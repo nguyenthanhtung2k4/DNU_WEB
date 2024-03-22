@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+     <link rel="stylesheet" href="./css/Home.css">
+     <style>
+          *{
+               box-sizing: border-box;
+               padding: 0;
+               margin: 0;
+          }
+          :root{
+               --menu-color: rgba(0, 0, 0, 0.755);
+               --hed-color:white;
+          }
+          html{
+               scroll-behavior: smooth;
+          }
+          body{
+               padding: 0;margin: 0;
+               width: 100%;height: 100%;
+               background-image: url('img/back_ground_main.jpg');/*
+               /*background: rgb(2,0,36);
+               background-color: rgba(94, 100, 104, 0.432);
+               background: radial-gradient(circle, rgba(106, 90, 61, 0.41) 16%,rgba(147, 124, 101, 0.903) 100%, rgba(160, 138, 122, 0.432) 100%);*/
+               background-color: #f5f1ed1f;
+               
+               box-sizing: border-box;
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-position: center;
+               background-attachment: fixed;
+          }
+          
+          /* phan nay  la  header==>  tong cua hed+menu
+           .header{ 
+               
+          } */
+
+          /*
+          phan nay  la  phan  contai-all-menu chinh chinh su  no  dang fixed 
+          .container-all-menu{
+               position: fixed;
+          }
+          */
+          .hed{
+               border: 0.1px solid rgba(40, 24, 24, 0.332);
+               /*background-image: url(img/bg1.jpg);*/
+               background-color: rgb(216, 155, 75);
+               object-position: right ;
+               width: auto;height: 5em;
+               /*opacity:  0.855;*/
+               text-align: center;
+               margin: 0;
+               padding: 0;
+               z-index: 9999;
+
+          }
+          img.logo_{
+               float: left;
+               height: 90%;
+               display: inline-block;
+               vertical-align: middle;
+               background-color: url('img/bg1.jpg');
+               width: 4.5em;height: 4.5em;
+               color: aliceblue;
+               border: 1px solid black;
+               border-radius:   200%;
+               display: inline-block;
+               position: absolute;
+               top: 0.2em;left: 5%;
+               opacity: 1.0;
+               transition: 0.2;
+
+          }
+          
+          
+          .text_coffee{
+               text-align: center;
+               line-height: normal;
+               font-family: 'Times New Roman', Times, serif;
+               font-size: 16pt;
+               color: black;
+               user-select: none;
+          }
+
+          #logo_user.material-symbols-outlined{
+               display: inline-block;
+               font-size: 3em;
+               line-height: normal;
+               vertical-align: -6%;
+               color: black; 
+               cursor: pointer;
+               position: absolute;
+               top: 0.6em;right: 2%;
+               opacity: 1.0;
+              /* box-shadow: inset 0 0 10px rgba(0,0,0,.5);*/
+
+
+          }
+          .tung{
+               margin-top: 3%;
+               margin-bottom: 7%;
+               padding-left: 8%;
+               padding-right: 8% ;
+               box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+               height: 2em;
+               font-size: large;
+               border-radius:  10%;
+               background-color: var(--hed-color);
+          }
+
+
+          .menu{
+             display: block;
+             position: fixed;
+             background-color: black;
+             width: 100%;
+             height: 2em;
+             padding: 0.5em;
+             z-index:  999;
+
+          }
+          .menu_tyle{
+               position: static;
+               left: 20%;
+               z-index:  9999;
+               
+          }
+          .text_menu{
+               text-decoration: none;
+               display: flex;
+               margin-left: 10%;
+               color: aliceblue;
+               opacity: 0.9;
+               font-weight: bold;
+               font-size: 18px;
+               cursor: pointer;
+               white-space:nowrap;
+          }
+          #home_menu{
+               color: white;
+               opacity:  0.8;
+               float: left;
+               margin-left: 8%;
+               font-weight: bold;
+               cursor: pointer;
+               
+          }
+          #home_manu:hover{
+               transition: height 100s;
+          }
+          
+          #home_menu2{
+               color: white;
+               float: left;
+               margin-left: 8%;
+               opacity: 0;
+               color: white;
+               user-select: none;
+               
+          }
+          /* Ẩn các thẻ <li> mặc định */
+          li.hidden {
+               display: none;
+               text-decoration: none;
+               padding-top: 10px ;
+          }
+          /* Hiển thị các thẻ <li> khi người dùng trỏ chuột vào <ul> */
+               #link{
+                    background-color: rgba(153, 73, 73, 0.5);
+               
+          }
+ 
+          #sanpham{
+               border: 0;
+               background-color: rgba(0, 0, 0, 0);
+               color: white; 
+               font-weight: bold;
+               font-size: 17px;
+               cursor: pointer;
+          }
+          #sp{
+               background-color: aliceblue;
+               color: black;
+          }
+          .mxh{
+               display: inline-block;
+               position: fixed;
+               bottom:    15%;
+               right: 3%;
+               font-size: 250%;
+               color: white;   
+          }
+          .search_tong{
+               padding-top: 1%;
+               text-align: center;
+               font-weight: bold;
+          }
+          input.search{
+               width: 40%;
+               height: 40px;
+               border-radius: 25px;
+               opacity: 0.87;
+               padding-left: 20px;
+               padding-right: 20px;
+               border: none;
+               opacity: 0.8;
+               font-weight: bold;
+               font-weight: bold;
+               box-shadow:inset 0px 0px 7px 4px rgb(196 181 181 / 50%);
+               color: black;
+               
+          }
+          .search_icon{
+               display: inline;
+               position: relative;
+               top: 7px;
+               color: aliceblue;
+               font-size:  25px;
+               cursor: pointer;
+               padding-top: 10px;
+          }
+          .marquee{
+               color: white;
+               margin-top: 0px;
+          }
+          .link_mxh{
+               text-decoration: none;
+               color: white;
+          }
+          .fab{
+               cursor: pointer;
+               transition: 0.5s;
+          }
+          .fab:hover{
+               transform:scale(1.3);
+
+          }
+          .Main{
+               margin-top: 10%;
+               color: white;
+               width: 100%;
+               display: block;
+               display: inline-block;
+
+          }
+          h2{
+               display: inline;
+               margin-top: 1%;
+               border-radius: 5px;
+               padding: 3px;
+
+               background-color: rgba(0, 0, 0, 0.742);
+               
+               color: white;
+          }
+          h3{
+               padding-top: 5%;
+               clear: both;
+          }
+          .loai{
+               clear: both;
+          }
+          hr{
+               background-color:rgba(0, 0, 0, 0.742); ;
+          }
+          .all_sp{
+               display: inline-block;
+               height: auto;width: 100%;
+               background-color: rgba(117, 103, 103, 0.253);
+               padding-bottom: 5%;
+               z-index: 2;
+          }
+          .sp{
+               float: left;
+               margin-left: 10%;
+               margin-top: 7%;
+          }
+          #sp1,#blog{
+               
+               transition:0.5s;
+          }
+          #sp1:hover,#blog:hover{
+               transform:scale(1.2);
+          }
+          /* san pham  div-sp*/
+          .div-sp{
+               text-align: center;
+               position: relative;
+               border: solid 2px black;
+               border: none;
+               border-radius: 10px;
+               padding: 3px;
+               /*background-color: rgba(209, 162, 162, 0.826);*/
+               background-color:rgba(255, 255, 255, 0.674);
+               width: 307px;height:  310px;
+               z-index: 1;
+               box-shadow:  inset 0px 0px 19px 6px rgb(70 49 49 / 50%);
+          }
+          /* CHINH  TAT  CA ANH  IMG SAN PHAM */
+          
+          img.img_sp{
+               display: block;
+               text-align: center;
+               
+               width: 300px;
+               height: 250px;
+               border-radius: 10px 10px 0px 0px;
+
+          }
+          /* CHINH  TUNG CAI  MOT */
+          .text_sp{
+               margin-bottom: 200%;
+               padding-left: 10%;
+               font-size: 150%;
+               color: black;
+               font-weight: bold;
+               text-align: center;
+          }
+          button{
+               color: aliceblue;
+               background-color: red;
+               z-index: 2;
+               border: 1px solid white;
+               border-radius: 15px;
+               display: inline-block;
+               font-size: 14px;
+               cursor: pointer;
+               position: absolute;
+               top: 50%;
+               right: 35%;
+               padding: 10px 20px;
+               transition: background-color 0.3s;
+               opacity: 1;
+               cursor: pointer;
+               z-index: 2;
+          }
+          .blog_link{
+               text-decoration: none;
+               color: white;
+          }
+          /*phan tu van =*/
+          .tu-van{
+               margin-top: 100px;
+               clear: both;
+               display: inline-block;
+               padding-left:auto;
+               padding-right: auto;
+               width: 100%;height:auto;
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-image: url('./img/avata_dang_ky_TU_VAN.jpg');
+          }
+          h4{
+               display: block;
+               margin-top: 0px;
+               text-align: center;
+               font-size: 200%;
+               color:red;
+               background-color:black;
+          }
+          .dangky{
+               float: left;
+               padding: 5px;
+               margin: 3%;
+               
+          }
+          #map{
+               margin-left: 15%;
+          }
+          .textmap{
+               color:aliceblue;
+               font-size: 100%;
+               padding-bottom: 10px;
+
+          }
+          .textmap_cty{
+               font-size: 150%;
+               font-weight: bold;
+          }
+          .tuvan_input{
+               font-size: 20px;
+               padding: 10px;
+               border-radius: 10px;
+               margin-bottom: 40px;
+               margin-left: 15%;
+               width:110%;
+               padding-left: 20px;
+
+
+          }
+          .text_tuvan_input{
+               margin-left: 15%;
+               color:aliceblue;
+               font-size: 20px;
+               font-weight: bold;
+               background-color: brown;
+          }
+          
+          .submit{
+               font-weight: bold;
+               cursor: pointer;
+          }
+
+          /*phan cuoi cua web Home*/
+
+          .footer{
+               margin-top: 100px;
+               border: 1px solid black;
+               height: auto;width: 100%;
+               background-color: rgba(0, 0, 0, 0.734);
+               color: white;
+               
+          }
+          .logo-vs-text{
+               margin-top: 5%;
+               margin-left: 3%;
+               float: left;
+               left: 30%;
+               text-align: center;
+          }
+          #logo_footer{
+               background-image: url('./img/logo.jpg');
+               width: 100px;height: auto;
+               background-size: 200%;
+               
+          }
+          .h2_footer{
+               color: white;
+               clear: both;
+               
+          }
+          .DoiTac{
+               margin-top:5%;
+               margin-left:9%;
+          }
+          .chung{
+               float:left;
+          }
+          #text-doiTac{
+               text-align: center;
+               color:yellow;
+               padding:10px;
+               
+          }
+          .col,.col1,.col2{
+               column-count:2;
+          }
+
+          .Pay{
+               margin-top:5%;
+               margin-left:9%;
+               
+          }
+          .link-pay{
+               color:aqua;
+          }
+          .item_pay{
+               font-size: 35px;
+          }
+          .item-mxh{
+               text-decoration: none;
+               color: aliceblue;
+               font-weight: bold;
+               font-size: 20px;
+               margin-top: 20px;
+               
+          }
+          #text-mxh{
+               padding: 20px;
+               color: yellow;
+          }
+          .copy{
+               font-size: 15px;
+               clear: both;
+               text-align: center;
+               position: relative;
+               bottom: 0px;
+          }
+          .fa-chevron-circle-up{
+               display: inline-block;
+               margin-top: 2%;
+               margin-left: 1%;
+               font-size: 200%;
+               transform: 0.5s;
+               color: white;
+          }
+          .link_backup{
+               text-decoration: nono;
+          }
+          .text_backup{
+               clear: auto;
+               color: aliceblue;
+          }
+          .fa-chevron-circle-up:hover{
+               color: brown;
+               transform: scale(1.3);
+          }
+          .img_chungtoi{
+               
+          }
+          .col_chungtoi1,.col_chungtoi0{
+               float: left;
+               width: 70%;
+          }
+          
+          
+
+          @media only screen and (max-width: 428px){
+               .text_coffee{
+                    font-size: 17px;
+               }
+          }
+          @media only  screen and (max-width:360px){
+               .fab{
+                    color: rgba(0, 0, 255, 0.674);
+                    font-size: 40px;
+               }
+               .text_sp{
+                    font-size: 100%;
+               }
+          }
+          @media only screen and (max-width:  836px) {
+               #home_menu, #home_Hien, .text_menu{
+                    display: none;
+               }
+               #home_menu2{
+                    display: block;
+                    opacity: 0.8;
+               }
+               #logo_user.material-symbols-outlined{
+                    display: inline-block;
+                    font-size: 2.2em;
+                    position: absolute;
+                    top: 1em;right: 2%;
+               }
+               .marquee{
+                    display: none;
+               }
+               .search_tong{
+                    display: inline-block;
+                    position: relative;
+                    top: -280%;
+                    height: 10%;
+                    width: 90%;
+                    margin-left: 7%;
+               }
+               #home_menu2:hover{
+                    color: brown;
+                    cursor: pointer;
+               }
+               #mobile_menu{
+                    display: block;
+               }   
+          }
+          /* Hover :  html*/
+          #home_menu:hover,#sanpham:hover,.text_menu:hover{
+               color: rgb(196, 64, 64);
+               opacity: 1.0;
+          }
+          #logo_user:hover,.search_icon:hover{
+               cursor: pointer;
+               opacity: 0.8;
+               color: white;
+               
+          }
+          
+          button:hover{
+               background-color: blue;
+               opacity: 1;
+          }
+          .img_sp:hover{
+               opacity: 0.8;
+          }
+          #San:hover .hidden {
+               color: white;
+               border-radius: 5px;
+               display: block;
+               position:relative;
+               z-index: 1;
+               width: auto;
+               height: auto;
+               text-decoration: none;
+          }
+          .submit:hover{
+               background-color: orange;
+               color: white;
+          }
+          
+          
+          
+          
+          
+          
+     </style>
+</head>
+<body>
+     <!-- phan nay  la phan dau  de  danh  cho logo  va thuong hieu -->
+<div id="header">
+     <div class="contai-all_menu" id="Home">
+          <div class="hed">
+               <div class="logo"><img class="logo_" src="img/logo.jpg" alt=""></div>
+               <div class="text_coffee">
+                    <h1 >Coffee Place</h1>
+                    <p>Vì sức khỏe vì tương lai</p>
+               </div>
+          <a href="login.html">
+               <span id="logo_user" class="material-symbols-outlined">
+                    <!-- <input type="search" class="search"> -->
+                    account_circle
+               </span>
+          </a>
+          </div>
+     <!--  Phan nay  la menu -->
+          <div class="menu">
+               <div id="home_An">
+                    <div class="menutyle2">
+                         <div id="home_menu2"><span class="material-symbols-outlined">
+                              lists
+                         </span></div>
+                    </div>
+                    <div id="home_Hien">
+                         <div class="menu_tyle">
+
+                              <a href="Home.html"><div id="home_menu"><span class="material-symbols-outlined">
+                                   home
+                              </span></div>  </a>
+                         <!-- <div id="home_menu"><span class="material-symbols-outlined">
+                              home
+                         </span></div>   -->
+
+                         <a href="#Home"><div id="home_menu"><span class="material-symbols-outlined">
+                         
+                         </span></div>  </a>
+
+                         </div> 
+                    </div>
+               </div>  
+               <div class="text_menu">
+                         <div class="text_menu">
+                              <!-- <select name="sanpham" id="sanpham">
+                                   <option value="all" id="all_sp">
+                                        
+                                   </option>
+                                   
+                              </select> -->
+                              <ul id="San">Sản Phẩm
+                                   <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_hat.html">Coffee Hạt</a></li>
+                                   <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_hoa_tan.html">Coffee Hòa Tan</a></li>
+                                   <li id="link" class="hidden"><a id="link" class="hidden" href="coffee_rang_xay.html">Coffee Rang Xay</a></li>
+                               </ul>   
+                         </div>
+                              <div id="thongtin" class="text_menu"><a class="text_menu" href="ThongTin.html">Thông Tin</a></div>
+                              <!-- <div id="thucdon" class="text_menu"><a class="text_menu" href="ThucDon.html">Thực đơn</a> </div> -->
+                              <div id="tintuc" class="text_menu"><a class="text_menu" href="TinTuc.html">Tin tức</a> </div>
+                              <div id="lienHe" class="text_menu"><a class="text_menu" href="LienHe.html">Liên hệ</a></div>
+               </div>
+               <div class="mxh">
+                    <div><a href="https://message.com" class="link_mxh" target="_blank"><i class="fab fa-facebook-messenger"></i></a></i></div>
+                    <div><a href="https://facebook.com" class="link_mxh" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+                    
+               </div>
+               <!-- search  tim  kien hang -->
+               <div class="search_tong">
+                    <marquee class="marquee" behavior="text_run" direction="text_run">Cafe là một loại thức uống phổ biến trên toàn thế giới, được làm từ hạt cà phê rang. Có nhiều loại Cafe khác nhau và sản phẩm cafe cũng đa dạng, từ cafe đen truyền thống đến các loại cafe đặc biệt và thức uống pha trộn</h1>
+                    </marquee>
+                    <input type="search" class="search" placeholder="Tìm kiếm tại đây ">
+                    <i class="search_icon fas fa-search"></i>
+                    
+               </div>
+          </div>
+     </div>
+          <!-- search  tim  kien hang -->
+          <!-- <div class="search_tong">
+               <marquee class="marquee" behavior="text_run" direction="text_run">Cafe là một loại thức uống phổ biến trên toàn thế giới, được làm từ hạt cà phê rang. Có nhiều loại Cafe khác nhau và sản phẩm cafe cũng đa dạng, từ cafe đen truyền thống đến các loại cafe đặc biệt và thức uống pha trộn</h1>
+               </marquee>
+               <input type="search" class="search" placeholder="Tìm kiếm tại đây ">
+               <i class="search_icon fas fa-search"></i>
+          </div> -->
+<!--  ALL  SAN PHAM O  DAY  :))  -->
+     <div class="Main">
+          <h2>*Tất cả các sản phẩm</h2><hr>
+          <div class="all_sp">
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham1_coffee_hat.jpg" alt="">
+                    <button><a class="blog_link" href="coffee_hat.html">Xem Thêm</a> </button>
+                    <div class="text_sp">Coffee Hạt Trung Nguyên Legend</div>
+               </div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham2_coffee_hoaTan.jpg" alt="">
+                    <button><a class="blog_link" href="coffee_hoa_tan.html">Xem Thêm</a> </button>
+                    <div class="text_sp">Coffee Hòa Tan G7 Gold Rumi</div>
+               </div>
+               <div id="sp1" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/san_pham3_cocoffeRangXay.jpg" alt="">
+                    <button><a class="blog_link" href="coffee_rang_xay.html">Xem Thêm</a> </button>
+                    <div class="text_sp">Coffee Rang Xay Sáng Tạo</div>
+               </div>
+          </div>
+          <div class="col_chungtoi0 ve_chungtoi">
+               <div class="img_chungtoi">
+                    <img class="img_chungtoi" src="./img/ve_chung_toi.webp" alt="img">
+               </div>
+               <div class="col_chungtoi1 text_chungtoi">Coffee Place tin tưởng rằng tất cả mọi người trên thê giới đều có thể thưởng thức những tách cà phê tự nhiên thuần khiết, cũng giống như thuở sơ khai con người chỉ có thể trồng và chế biến cà phê một cách tự nhiên và hoàn toàn hữu cơ. 
+Chính vì vậy chúng tôi đã đặt ra sứ mệnh cho riêng mình đó là "Mang cà phê hữu cơ Việt ra thế giới". Cà phê L'amant được trồng tại núi Hàm Rồng - Gia Lai, ở độ cao 750m so với mặt nước biển, với khí hậu ôn hòa, thổ nhưỡng thích hợp và lý tưởng nhất để trồng cà phê. 
+Coffee Place là thương hiệu đầu tiên tại Việt Nam có nông trại cà phê đạt chuẩn hữu cơ USDA của Bộ Nông nghiệp Hoa Kỳ. Coffee Place sử dụng nguồn nguyên liệu đáp ứng các bộ tiêu chuẩn quốc tế như 4C, UTZ, BRC, Japan Organic và EU Organic. 
+                </div>
+          </div>
+          <div class="all_blog">
+               <h3>Các thông tin khác:</h3><hr class="loai">
+               <div id="blog" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_kinhdoand_cofffee_book.jpg" alt="">
+                    <button><a class="blog_link" href="mohinhkd.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Kinh Nghiệm Mở Cafe Sách</div>
+               </div>
+               <div id="blog" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_top10_city_cafe.jpeg" alt="">
+                    <button><a class="blog_link" href="caphecity.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Top10 Thành Phố Nổi Tiếng Nhất Thế Giới</div>
+               </div>
+               <div id="blog" class="sp div-sp">
+                    <img  class="img_sp1 img_sp" src="./img/BLOG_cafe_hien_nay.jpeg" alt="">
+                    <button><a class="blog_link" href="thuctrangcafe.html" target="_self">Xem Thêm ></a> </button>
+                    <div class="text_sp">Blog:Cafe hiện nay như thế nào</div>
+               </div>
+          </div>
+          <div class="tu-van">
+               <h4>Đăng Ký Tư Vấn</h4>
+               <div id="map" class="dangky">
+                    <p class="textmap textmap_cty">Công ty cổ phần coffee DNU</p>
+                    <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+                    <p class="textmap">Điện Thoại: (024)335577799</p>
+                    <p class="textmap">Email: dnu@dainam.edu.vn</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.12060794678!2d105.75778851501447!3d20.947671158583873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452eaa9c461c3%3A0x2a3e1c421f299adc!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyDEkOG6oWkgTmFt!5e0!3m2!1svi!2s!4v1709450701964!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+               <div id="TuVan" class="dangky">
+                    <div><input class="tuvan_input" type="text" placeholder="Họ Và Tên(*)"></div>
+                    <div><input class="tuvan_input" type="tel" placeholder="Số Điện Thoại(*)"></div>
+                    <div><input class="tuvan_input" type="email" placeholder="Email(*)"></div>
+                    <div><label class="text_tuvan_input" for="TuVan">Ngày Tháng Năm Sinh:</label>
+                         <input class="tuvan_input" type="date" placeholder="Email(*)" value="ngay/ thang/nam">
+                    </div>
+                    <div><input class="tuvan_input submit" type="submit" value="Gui"></div>
+               </div>
+          </div>
+               
+     </div>
+</div>
+<div class="footer">
+     <hr>
+     <div class="logo-vs-text">
+          <div class="logoFooter">
+               <img src="./img/logo.jpg" alt="logo.img"id="logo_footer">
+          </div>
+          <div><h2 class="h2_footer">Coffee Place</h2>
+               <p class="textmap textmap_cty">Công ty cổ phần coffee DNU</p>
+               <p class="textmap">Địa chỉ: Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+               <p class="textmap">Điện Thoại: (024)335577799</p>
+               <p class="textmap">Email: dnu@dainam.edu.vn</p>
+          </div>
+     </div>
+     <div class="DoiTac chung">
+          <p id="text-doiTac">Đối Tác Chúng Tôi</p>
+          <div class="col">
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-01.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-02.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-03.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-04.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-05.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-06.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-07.jpg"></div>
+               <div class="item_dt"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/partners/partner-3-08.jpg"></div>
+          </div>
+     </div>
+     <div class="Pay chung">
+          <p id="text-doiTac">Đối Tác Thanh Toán</p>
+          <div class="col1">
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-visa.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-master.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-jcb.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-atm.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/logo-payment-cod.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/alepay.png"></div>
+               <div class="item_pay"><img src="https://cafe.net.vn/static/version1708438865/frontend/Trungnguyen/default/vi_VN/images/payments/payoo.png"></div>
+          </div>
+           <a class="link-pay" href="thanhtoan.html">Cách thức thanh toán</a> 
+     </div>
+     <div class="all-mxh chung Pay">
+          <p id="text-doiTac">Các Trang Mạng Xã Hội</p>
+          <div class="col2">
+               <div class="item_mxh"><a class="item-mxh" href="https://facebook.com">Facebook</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://youtube.com">Youtube</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://tiktok.com">TikTok</a></div>
+               <div class="item_mxh"><a class="item-mxh" href="https://zalo.com">Zalo</a></div>
+          </div>
+          
+     </div>
+     <div><a class="link_backup" href="#Home"><i class="back-up fas fa-chevron-circle-up"></i></a><p class="text_backup">Trở về Đầu</p></div>
+     <p class="copy">© 2024 ThanhTung-TranTu</p>
+</div>    
+<style>
+     /* phan style ben duoi  nay  la phan danh  cho  js  de chinh sua cho  phu  hop*/
+     .menu {
+          /*top: -100px; /*Đẩy menu lên trên đầu trang để ẩn nó đi ban đầu */
+          width: 100%;
+          transition: top 0.5s; /* Hiệu ứng chuyển động khi menu xuất hiện */
+      }
+  
+      /* CSS cho phần nội dung chính */
+      .Main {
+          margin-top: 100px; /* Đảm bảo nội dung không bị che khuất bởi menu */
+      }
+     </style>
+     <script>
+          // JavaScript để giữ cho phần menu luôn ở vị trí đầu tiên của trang web khi cuộn
+          window.addEventListener('scroll', function() {
+              var menu = document.querySelector('.menu');
+              var menu1 = document.querySelector('.marquee');
+              var mainContent = document.querySelector('.Main');
+      
+              if (window.pageYOffset > mainContent.offsetTop) {
+                  menu.style.position = 'fixed';
+                  menu.style.top = '0';
+                  menu1.style.display='none';
+               } else {
+                    menu.style.top='-3px'
+                    menu.style.position = 'relative';
+              }
+          });
+      </script>
+</body>
+</html>
