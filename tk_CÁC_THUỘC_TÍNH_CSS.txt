@@ -318,7 +318,11 @@ div {
 	tetx-shadow : hiệu ứng bóng độ(tetx-shadow: CHIỀU CAO px, BÊN PHẢI px, BÊN DƯỚI px, TÊN  MÀU )
 	
 	text-direction: none; :dùng để bỏ gạch chân dưới đường link
-	text-visited:{màu bạn muốn}  khi nhấn vào  và thoát ra nó sẽ hiện link đó màu khác 
+                    line-through
+                    overline
+                    underline
+                    underline overline
+     text-visited:{màu bạn muốn}  khi nhấn vào  và thoát ra nó sẽ hiện link đó màu khác 
 ==> NGOÀI RA TA CŨNG CÓ THỂ DÙNG CÁC KIỂU PHÔNG CHỮ Ở TRANG WEB:
 LINK THAM KHẢO:  https://fonts.google.com/
 LNK THAM KHẢO : https://youtu.be/d8BrZ12XCXA?si=jqjhUy6GyHQvS6_t
@@ -471,7 +475,9 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
 #thuoc tinh  flaot , clear: hiệu  ứng thả nổi
      clear:both | right | left
      float:left|right|none
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     flex: 1; /* Cho phép các cột chiếm không gian linh hoạt */
+          ==> flex là tỷ lệ chiêm trong khung hinh 
+     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #thuoc tinh: transform >>>  Nó sẽ giúp vật thể đó thay đổi kích thước và không làm ảnh hưởng đến kích thước của vật thể khác.
                        >>>  Nói một cách khác thì transform có thẻ đè nền vật thể khác và không làm thay đổi của vật thể kia.
                        >>>  Ngoài ra nó cũng có thể xoay  được chiều dọc ,ngang.....
@@ -533,6 +539,13 @@ VIDEO  HƯỚNG DÂN : https://youtu.be/udH5y0XSd1k?si=swCIMpf3c13RivPo
                     ==> KHI  TA SU DUNG CODE  TREN THI NO SE CAN RA  GIUA - CENTER.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Căn ra giữa(Center)
+                    {
+                         display: flex;
+                         flex-direction: column;
+                         position: absolute;
+                    } ==>  Bổ sung thêm phần display để lấy căn chiỉnh hợp lý
+                    
+                    display: flex; 
                     flex-wrap: wrap; /* Cho phép các phần tử con tràn qua hàng mới khi cần */
                     justify-content: center; /* Căn chỉnh các phần tử con theo chiều ngang */
                     transform:translate(-50%,-50%);

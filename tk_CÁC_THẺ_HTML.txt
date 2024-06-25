@@ -103,7 +103,16 @@ vd : chữ  "kiểu văn bản "  nó sẽ nùi vào 1 dòng
 		thuộc tính  : hover() la khi  ta di chuyển con trỏ đến nơi mik muốn nó sẽ thay đổi màu mà mik đã cài đặt 
 		vd ==> th:hover{
                background-color: aqua;
-          }	
+          }
+		thuộc tính: visibility: này xác định liệu phần tử có hiển thị hay bị ẩn hay không. Nó có hai giá trị chính:
+				visible: Phần tử sẽ hiển thị bình thường.
+				hidden: Phần tử sẽ bị ẩn.
+				
+		thuộc tính overflow được sử dụng để xác định cách xử lý nội dung tràn ra khỏi vùng chứa của phần tử. Nó có bốn giá trị chính:
+				overflow: visible: Nội dung bên trong sẽ tràn ra khỏi div 100px và có thể chồng lên các phần tử khác trên trang.
+				overflow: hidden: Nội dung bên trong sẽ bị cắt bớt tại 100px và không hiển thị phần tràn ra ngoài.
+				overflow: scroll: Thanh cuộn dọc sẽ xuất hiện bên phải div, cho phép người dùng cuộn xuống để xem phần nội dung bị ẩn.
+				overflow: auto: Thanh cuộn dọc chỉ xuất hiện khi người dùng di chuột qua div hoặc khi nội dung bên trong tràn ra ngoài 100px.
 ##############################################################################
 <input> dung để chọn đáp án 
 <button>  hiện ra 1 nút để nhấn vào
@@ -264,7 +273,7 @@ bổ sung tham khảo :  <span> dùng để chèn màu hay ảnh vào 1 văn b�
 				</datalist> 
 			</form>
 	##############################################################################
-	<textarea> cho phép được ghi văn bản vô  hạn
+	<textarea> cho phép được ghi văn bản vô  hạn (text)
 	( đi  với rows: xác định số dòng)
 	( đi với cols: xác định số cột văn bản)
 	vd:
