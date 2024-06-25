@@ -317,6 +317,10 @@ div {
 				(text-transform: capitalize;IN CHỮ CÁI ĐẦU TIÊN)
 	tetx-shadow : hiệu ứng bóng độ(tetx-shadow: CHIỀU CAO px, BÊN PHẢI px, BÊN DƯỚI px, TÊN  MÀU )
 	
+     focus : Trạng thái phần từ khi đang được nhập  giữ liệu vào input
+     outline: none loại  bỏ đường viền
+     
+
 	text-direction: none; :dùng để bỏ gạch chân dưới đường link
                     line-through
                     overline
