@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học jQuery</title>
+    <!-- Cách 1: Nhúng trực tiếp -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- Cách 2: Sử dụng CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script>
+        //JavaScript
+        // document.getElementById("btn").addEventListener('click',()=>{
+        //     document.getElementsByTagName("h1")[0].style.display = "none";
+        // });
+
+        //jQuery
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("h1").hide();
+            });
+        });     
+    </script>
+</head>
+<body>
+    <h1>Học lập trình jQuery</h1>
+    <button id="btn">Click me</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid system</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <style>
+        .show-grid [class ^= "col-"]{
+            border: 1px solid #ddd;
+            background-color: #eee;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row show-grid">
+            <div class="col-md-6 col-sm-3">TRÁI</div>
+            <div class="col-md-6 col-sm-9">PHẢI</div>
+        </div>  
+        <div class="row show-grid">
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+            <div class="col-md-1">1</div>
+        </div> 
+        <div class="row show-grid">
+            <div class="col-md-4 offset-md-2">CONTENT</div>
+        </div>
+    </div>   
+</body>
+</html>

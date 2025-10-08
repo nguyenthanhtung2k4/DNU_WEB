@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert element</title>
+    <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="btn1">append</button>
+    <button id="btn2">after</button>
+    <button id="btn3">appendTo</button>
+    <button id="btn4">prepend</button>
+    <button id="btn5">before</button>
+    <button id="btn6">prependTo</button>
+    <button id="btn7">remove</button>
+    <button id="btn8">empty</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#list").append("<li>Item 3</li>");
+            });
+
+            $("#btn2").click(function(){
+                $("#list").after("<li>Item 3</li>");
+            });
+        });
+    </script>
+</body>
+</html>

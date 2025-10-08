@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideDown/slideUp</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <style>
+        .wraper{
+            border: 1px solid #ddd;
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">slideUp</button>
+    <button id="btn2">slideDown</button>
+    <button id="btn3">slideToggle</button>
+    <div class="wraper">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".wraper").slideUp(2000);
+            });
+
+            $("#btn2").click(function(){
+                $(".wraper").slideDown(2000);
+            });
+
+            $("#btn3").click(function(){
+                $(".wraper").slideToggle(2000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <input type="number" name="num1" id="num1">
+            <input type="number" name="num2" id="num2">
+        </div>
+        <div>
+            <button id="btn1" onclick="tinhTong();">Cộng</button>
+            <button id="btn2">Trừ</button>
+            <button id="btn3">Nhân</button>
+            <button id="btn4">Chia</button>
+        </div>
+        <p id="result"></p>
+    </div>
+    <script>
+        function tinhTong(){
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Kết quả: "+(num1+num2);
+        }
+    </script>
+</body>
+</html>

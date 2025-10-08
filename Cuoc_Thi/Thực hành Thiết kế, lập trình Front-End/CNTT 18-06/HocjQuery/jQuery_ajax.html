@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery ajax</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 60%;
+            margin: 10px auto;
+        }
+        table{
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+        }
+        th,td{
+            border: 1px solid #ddd;
+            padding: 8px;    
+        }
+        th{
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Danh sách sinh viên</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th>Điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody id="content">
+                <!-- Dữ liệu call từ API sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            loadData();
+        });
+        //hàm call dữ liệu từ API
+        function loadData(){
+            $.ajax({
+                url: 'https://67b596ee07ba6e59083d8085.mockapi.io/api/v1/students',
+                type: 'GET',
+                dataType: 'json',
+                success: function(response){
+                    let row = '';
+                    let i = 1;
+                    $.each(response,(index,value)=>{
+                        row += '<tr>';
+                        row += '<td>'+i+'</td>';
+                        row += '<td>'+value.fullname+'</td>';
+                        row += '<td>'+value.email+'</td>';
+                        row += '<td>'+value.phone+'</td>';
+                        row += '<td>'+value.address+'</td>';
+                        row += '<td><button onclick="deleteStudent('+value.id+')">Xóa</button></td>';
+                        row += '</tr>';
+                        i++;
+                    });
+                    $("#content").html(row);
+                }
+            });
+        }
+
+        //hàm xóa sinh viên
+        function deleteStudent(id){
+            if(confirm('Bạn có đồng ý xóa '+id)){
+                $.ajax({
+                    url: 'https://67b596ee07ba6e59083d8085.mockapi.io/api/v1/students/'+id,
+                    type: 'DELETE',
+                    dataType: 'json',
+                    success: function(response){
+                        loadData();//tải lại dữ liệu
+                    },
+                    error: function(e){
+                        console.log("Lỗi:",e);
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

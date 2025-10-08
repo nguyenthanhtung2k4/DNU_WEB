@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get/Set attribute</title>
+    <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1><a href="https://dainam.edu.vn">Đại học Đại Nam</a></h1>
+    <button id="btn1">Get attribute</button>
+    <button id="btn2">Set attribute</button>
+    <button id="btn3">Remove attribute</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert($("a").attr("href"));
+            });
+
+            $("#btn2").click(function(){
+                $("a").attr("href","https://vnexpress.net");
+            });
+
+            $("#btn3").click(function(){
+                $("a").removeAttr("href");
+            });
+        });
+    </script>
+</body>
+</html>
